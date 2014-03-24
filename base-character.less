@@ -1,0 +1,239 @@
+// **********************************
+// **********************************
+@robotWidth: 300px;
+@robotHeight: 350px;
+
+// robot's head
+@robotHead: 120px;
+@robotNeck: 70px;
+
+// the width of the robot's belly
+@coreWidth: @robotWidth*.5;
+
+// the width of the robot's feet
+@feetWidth: 125px;
+
+//arm length
+@armLength: 200px;
+
+//speed
+@energy: 2s;
+// **********************************
+// **********************************
+
+
+
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background: #2989d8; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #2989d8 1%, #282f56 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#2989d8), color-stop(100%,#282f56)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #2989d8 1%,#282f56 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #2989d8 1%,#282f56 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #2989d8 1%,#282f56 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #2989d8 1%,#282f56 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#282f56',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.shadow() {
+  box-shadow: 
+      3px 3px 1px rgba(256,256,256,.25) inset, 
+      -5px -15px 5px rgba(0,0,0,.1) inset, 
+      5px 5px 5px rgba(0,0,0,.1);
+  background: rgba(100,155,155,1);
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  perspective:600px;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  /*
+  transform: rotate3d(0,0,1,10deg);
+  -webkit-transform: rotate3d(0,0,1,10deg);
+  -moz-transform: rotate3d(0,0,1,10deg);
+  */
+  
+  * {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+  }
+  
+  .body {
+    //border: dashed 1px red;
+    position: absolute;
+    bottom: 10%;
+    left: calc(~"50% - " @robotWidth/2 );
+    height: @robotHeight;
+    width: @robotWidth;
+    z-index: 5;
+    -webkit-animation: stretch @energy alternate ease-in-out infinite; 
+    -webkit-transform-origin: 50% 100%;
+
+    
+    &:after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -8px;
+      height: 10px;
+      background: rgba(0,0,0,.5);
+      content: '';
+      box-shadow: 0 0 30px rgba(0,0,0,1);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    .head {
+      position: absolute;
+      top: 5px;
+      left: calc(~"50% - " @robotHead/2 );
+      width: @robotHead;
+      height: 20%;
+
+      -webkit-animation: rotateSidetoSide @energy alternate ease-in-out infinite; 
+      -webkit-transform-origin: 50% 100%;
+      
+      * {
+        position: absolute;
+        .shadow()    
+      }
+      
+      .neck {
+        width: @robotNeck*.5;
+        height: @robotNeck;
+        bottom: 0;
+        left: calc(~"50% - " @robotNeck*.5/2 );
+        border-radius: 50% 50% 0% 0%;
+      }
+      
+      .face {
+        width: @robotHead;
+        height: @robotHead;
+        position: absolute;
+        top: -@robotNeck;
+        border-radius: 5% 5% 35% 35%;
+        -webkit-animation: rotateSidetoSideSm @energy/2 alternate ease-in-out infinite; 
+        -webkit-transform-origin: 50% 100%;
+      }
+    }
+    
+    .core {
+      width: @coreWidth;
+      position: absolute;
+      bottom: 15%;
+      top: 20%;
+      left: calc(~"50% - " (@coreWidth)/2 );
+      z-index:10;
+      .belly {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 50% 50% 10% 10%;
+        position: absolute;
+        .shadow();
+        z-index:10;
+      }  
+      .left-arm {
+        position: absolute;
+        .shadow();        
+        width: @armLength;
+        height: @armLength*.25;
+        top: 10%;
+        left: calc(~"50% - "@armLength);
+        
+        -webkit-animation: rotateLeftArm @energy alternate ease-in-out infinite; 
+        -webkit-transform-origin: 100% 0%;
+        
+        &:after {
+          position: absolute;
+          .shadow();        
+          width: @armLength/2;
+          height: @armLength*.5;          
+          right: @armLength*.8;
+          top: -(@armLength*.15);
+          content: '';
+          border-radius: 5% 25% 25% 75%;
+        }
+      }
+      .right-arm {
+        position: absolute;
+        .shadow();        
+        width: @armLength;
+        height: @armLength*.25;
+        top: 10%;
+        right: calc(~"50% - "@armLength);
+        -webkit-animation: rotateRightArm @energy alternate ease-in-out infinite; 
+        -webkit-transform-origin: 0% 0%;
+        &:after {
+          position: absolute;
+          .shadow();        
+          width: @armLength/2;
+          height: @armLength*.5;          
+          left: @armLength*.8;
+          top: -(@armLength*.15);
+          content: '';
+          border-radius: 25% 5% 75% 25%;
+        }
+      }      
+    }      
+    
+    .left-foot {
+      bottom: 0;
+      width: @feetWidth;
+      left: 0;
+      height: 20%;
+      position: absolute;
+      .shadow();
+      border-radius: 150% 50% 35% 5%;
+      z-index: 5;
+      -webkit-animation: stretch @energy alternate ease-in-out infinite; 
+      -webkit-transform-origin: 100% 0;      
+    }
+    
+    .right-foot {
+      bottom: 0;
+      width: @feetWidth;
+      right: 0;
+      height: 20%;
+      position: absolute;
+      .shadow();
+      border-radius: 50% 150% 5% 35%;
+      z-index: 5;
+      -webkit-animation: stretch @energy alternate ease-in-out infinite; 
+      -webkit-transform-origin: 100% 0%;      
+    }
+    
+    
+    
+  }
+}
+
+@-webkit-keyframes rotateSidetoSide {
+  from { -webkit-transform: rotate3d(0,0,1,-5deg); }
+  to { -webkit-transform: rotate3d(0,0,1,5deg); }
+}
+@-webkit-keyframes rotateSidetoSideSm {
+  from { -webkit-transform: rotate3d(0,0,1,-1deg); }
+  to { -webkit-transform: rotate3d(0,0,1,1deg); }
+}
+@-webkit-keyframes rotateLeftArm {
+  from { -webkit-transform: rotate3d(0,0,1,-25deg); }
+  to { -webkit-transform: rotate3d(0,0,1,-20deg); }
+}
+@-webkit-keyframes rotateRightArm {
+  from { -webkit-transform: rotate3d(0,0,1,25deg); }
+  to { -webkit-transform: rotate3d(0,0,1,20deg); }
+}
+@-webkit-keyframes stretch {
+  from { -webkit-transform: scale3d(1,1.05,1); }
+  to { -webkit-transform: scale3d(1,1,1); }
+} 
