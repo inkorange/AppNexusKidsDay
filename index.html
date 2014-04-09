@@ -44,7 +44,14 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script src="js/robot-pc.js"></script>
 		<script>
-			var robotEngine = new robot();
+			// this is the collection of classes that will be used to animate.......
+			var animArray = ['a','armsup','c h y','armsup','e armsup','f','g'];
+
+			// instantiating your robot and letting it dance
+			var robotEngine = new robot({
+					animationRoutine :  animArray,
+					$robot :  $('.body')
+			});
 		</script>
 
 	</body>

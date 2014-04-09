@@ -1,0 +1,26 @@
+
+
+@-webkit-keyframes rotateLeftArmUp {
+	to { -webkit-transform: rotate3d(0,0,1,-40deg); }
+}
+@-webkit-keyframes rotateRightArmUp {
+	to { -webkit-transform: rotate3d(0,0,1,40deg); }
+}
+
+
+.stage {
+	.body {
+		// 'armsup' PUT BOTH ARMS UP **************************
+		&.armsup {
+			.core {
+				.left-arm {
+					-webkit-animation: rotateLeftArm 1s alternate ease-in-out infinite, rotateLeftArmUp 1s alternate ease-in-out;
+				}
+				.right-arm {
+					-webkit-animation: rotateRightArm 1s alternate ease-in-out infinite, rotateRightArmUp 1s alternate ease-in-out;
+				}
+			}
+		}
+
+	}
+}
