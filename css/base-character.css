@@ -4,28 +4,20 @@ html {
   width: 100%;
   background: #2989d8;
   /* Old browsers */
-
   background: -moz-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* FF3.6+ */
-
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, #2989d8), color-stop(100%, #282f56));
   /* Chrome,Safari4+ */
-
   background: -webkit-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Chrome10+,Safari5.1+ */
-
   background: -o-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Opera 12+ */
-
   background: -ms-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* IE10+ */
-
   background: radial-gradient(ellipse at center, #2989d8 1%, #282f56 100%);
   /* W3C */
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#282f56', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
-
 }
 .stage {
   position: absolute;
@@ -41,7 +33,6 @@ html {
   -webkit-transform: rotate3d(0,0,1,10deg);
   -moz-transform: rotate3d(0,0,1,10deg);
   */
-
 }
 .stage * {
   -webkit-transform-style: preserve-3d;
@@ -55,8 +46,6 @@ html {
   height: 350px;
   width: 300px;
   z-index: 5;
-  -webkit-animation: stretch 2s alternate ease-in-out infinite;
-  -webkit-transform-origin: 50% 100%;
 }
 .stage .body:after {
   position: absolute;
@@ -76,12 +65,10 @@ html {
   left: calc(50% -  60px);
   width: 120px;
   height: 20%;
-  -webkit-animation: rotateSidetoSide 2s alternate ease-in-out infinite;
-  -webkit-transform-origin: 50% 100%;
 }
 .stage .body .head * {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
 }
 .stage .body .head .neck {
@@ -97,8 +84,71 @@ html {
   position: absolute;
   top: -70px;
   border-radius: 5% 5% 35% 35%;
-  -webkit-animation: rotateSidetoSideSm 1s alternate ease-in-out infinite;
-  -webkit-transform-origin: 50% 100%;
+}
+.stage .body .head .face .eyes {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  height: 45px;
+  box-shadow: none;
+}
+.stage .body .head .face .eyes .eye {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 30px;
+  box-shadow: 0 2px 0 0 #3c5d5d inset;
+  border-radius: 50%;
+  -webkit-animation: wink 0.5s alternate ease-in-out infinite;
+}
+.stage .body .head .face .eyes .eye:before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  right: 2px;
+  background-color: black;
+  content: "";
+  border-radius: 50%;
+  -webkit-animation: look 3s alternate ease-in-out infinite;
+}
+.stage .body .head .face .eyes .eye:after {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  bottom: 15px;
+  right: 8px;
+  background-color: #ffffff;
+  content: "";
+  border-radius: 50%;
+}
+.stage .body .head .face .eyes .eye:last-child {
+  right: 0;
+  -webkit-animation-delay: .1s;
+}
+.stage .body .head .face .month {
+  position: absolute;
+  left: 40px;
+  bottom: 25px;
+  width: 40px;
+  height: 20px;
+  background-color: red;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.stage .body .head .face .month:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 60px;
+  height: 27px;
+  background-color: #649b9b;
+  box-shadow: none;
+  border-radius: 50%;
+  -webkit-animation: talk 0.66666667s alternate ease-in-out infinite;
 }
 .stage .body .core {
   width: 150px;
@@ -115,24 +165,22 @@ html {
   left: 0;
   border-radius: 50% 50% 10% 10%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   z-index: 10;
 }
 .stage .body .core .left-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 200px;
   height: 50px;
   top: 10%;
   left: calc(50% -  200px);
-  -webkit-animation: rotateLeftArm 2s alternate ease-in-out infinite;
-  -webkit-transform-origin: 100% 0%;
 }
 .stage .body .core .left-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 100px;
   height: 100px;
@@ -143,18 +191,16 @@ html {
 }
 .stage .body .core .right-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 200px;
   height: 50px;
   top: 10%;
   right: calc(50% -  200px);
-  -webkit-animation: rotateRightArm 2s alternate ease-in-out infinite;
-  -webkit-transform-origin: 0% 0%;
 }
 .stage .body .core .right-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 100px;
   height: 100px;
@@ -169,12 +215,10 @@ html {
   left: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 150% 50% 35% 5%;
   z-index: 5;
-  -webkit-animation: stretch 2s alternate ease-in-out infinite;
-  -webkit-transform-origin: 100% 0;
 }
 .stage .body .right-foot {
   bottom: 0;
@@ -182,12 +226,25 @@ html {
   right: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 50% 150% 5% 35%;
   z-index: 5;
-  -webkit-animation: stretch 2s alternate ease-in-out infinite;
-  -webkit-transform-origin: 100% 0%;
+}
+@-webkit-keyframes talk {
+  to {
+    top: -20px;
+  }
+}
+@-webkit-keyframes wink {
+  to {
+    box-shadow: 0 17px 0 0 #283e3e inset;
+  }
+}
+@-webkit-keyframes look {
+  to {
+    right: 8px;
+  }
 }
 @-webkit-keyframes rotateSidetoSide {
   from {

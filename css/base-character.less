@@ -74,8 +74,6 @@ body, html {
     height: @robotHeight;
     width: @robotWidth;
     z-index: 5;
-    -webkit-animation: stretch @energy alternate ease-in-out infinite; 
-    -webkit-transform-origin: 50% 100%;
 
     
     &:after {
@@ -98,12 +96,10 @@ body, html {
       width: @robotHead;
       height: 20%;
 
-      -webkit-animation: rotateSidetoSide @energy alternate ease-in-out infinite; 
-      -webkit-transform-origin: 50% 100%;
-      
+
       * {
         position: absolute;
-        .shadow()    
+        .shadow()
       }
       
       .neck {
@@ -120,8 +116,75 @@ body, html {
         position: absolute;
         top: -@robotNeck;
         border-radius: 5% 5% 35% 35%;
-        -webkit-animation: rotateSidetoSideSm @energy/2 alternate ease-in-out infinite; 
-        -webkit-transform-origin: 50% 100%;
+
+	        .eyes {
+		        position: absolute;
+		        top: 10px;
+		        left: 20px;
+		        right: 20px;
+		        height: 45px;
+		        box-shadow: none;
+		        .eye {
+			        position: absolute;
+			        top: 0;
+			        bottom: 0;
+			        background-color: #fff;
+			        width: 30px;
+			        box-shadow: 0 2px 0 0 darken(rgba(100,155,155,1),20%) inset;
+			        border-radius: 50%;
+			        -webkit-animation: wink .5s alternate ease-in-out infinite;
+			        &:before {
+				        width: 20px;
+				        height: 20px;
+				        position: absolute;
+				        bottom: 5px;
+				        right: 2px;
+				        background-color: black;
+				        content: "";
+				        border-radius: 50%;
+
+				        -webkit-animation: look 3s alternate ease-in-out infinite;
+			        }
+			        &:after {
+				        width: 2px;
+				        height: 2px;
+				        position: absolute;
+				        bottom: 15px;
+				        right: 8px;
+				        background-color: #ffffff;
+				        content: "";
+				        border-radius: 50%;
+			        }
+			        &:last-child {
+				        right: 0;
+				        -webkit-animation-delay: .1s;
+			        }
+		        }
+	        }
+
+	      .month {
+		      position: absolute;
+		      left: 40px;
+		      bottom: 25px;
+		      width: 40px;
+		      height: 20px;
+		      background-color: red;
+		      box-shadow: none;
+		      border-radius: 50%;
+		      &:before {
+			      content: "";
+			      position: absolute;
+			      left: -10px;
+			      top: -10px;
+			      width: 60px;
+			      height: 27px;
+			      background-color: #649b9b;
+			      box-shadow: none;
+			      border-radius: 50%;
+			      -webkit-animation: talk @energy/3 alternate ease-in-out infinite;
+		      }
+	      }
+
       }
     }
     
@@ -149,9 +212,7 @@ body, html {
         height: @armLength*.25;
         top: 10%;
         left: calc(~"50% - "@armLength);
-        
-        -webkit-animation: rotateLeftArm @energy alternate ease-in-out infinite; 
-        -webkit-transform-origin: 100% 0%;
+
         
         &:after {
           position: absolute;
@@ -171,8 +232,7 @@ body, html {
         height: @armLength*.25;
         top: 10%;
         right: calc(~"50% - "@armLength);
-        -webkit-animation: rotateRightArm @energy alternate ease-in-out infinite; 
-        -webkit-transform-origin: 0% 0%;
+
         &:after {
           position: absolute;
           .shadow();        
@@ -195,8 +255,7 @@ body, html {
       .shadow();
       border-radius: 150% 50% 35% 5%;
       z-index: 5;
-      -webkit-animation: stretch @energy alternate ease-in-out infinite; 
-      -webkit-transform-origin: 100% 0;      
+
     }
     
     .right-foot {
@@ -208,13 +267,31 @@ body, html {
       .shadow();
       border-radius: 50% 150% 5% 35%;
       z-index: 5;
-      -webkit-animation: stretch @energy alternate ease-in-out infinite; 
-      -webkit-transform-origin: 100% 0%;      
+
     }
     
     
     
   }
+}
+
+@-webkit-keyframes talk {
+	to {
+		top: -20px;
+	}
+}
+
+@-webkit-keyframes wink {
+	to {
+		box-shadow: 0 17px 0 0 darken(rgba(100,155,155,1), 30%) inset;
+	}
+}
+
+@-webkit-keyframes look {
+	to {
+
+		right: 8px;
+	}
 }
 
 @-webkit-keyframes rotateSidetoSide {
