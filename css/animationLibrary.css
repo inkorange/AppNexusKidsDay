@@ -1,0 +1,22 @@
+@-webkit-keyframes rotateLeftArmUp {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, -25deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -40deg);
+  }
+}
+@-webkit-keyframes rotateRightArmUp {
+  from {
+    -webkit-transform: rotate3d(0, 0, 1, 25deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 40deg);
+  }
+}
+.stage .body.armsup .core .left-arm {
+  -webkit-animation: rotateLeftArmUp 1s alternate ease-in-out infinite;
+}
+.stage .body.armsup .core .right-arm {
+  -webkit-animation: rotateRightArmUp 1s alternate ease-in-out infinite;
+}
