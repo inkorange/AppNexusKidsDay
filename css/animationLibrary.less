@@ -52,6 +52,27 @@
 				}
 			}
 		}
-
+		&.toes{
+			bottom: 80px;
+			.right-foot {
+				-webkit-transform: rotate3d(0,0,1,40deg);
+			}
+			.left-foot {
+				-webkit-transform: rotate3d(0,0,1,-40deg);
+			}
+			.showShadow {
+				bottom: -40px;
+				width: 240px;
+				left: calc(~"50% - 120px");
+			}
+		}
+		&.jump{
+			bottom: 180px;
+			.showShadow {
+				bottom: -140px;
+				width: 140px;
+				left: calc(~"50% - 70px");
+			}
+		}
 	}
 }

@@ -40,34 +40,48 @@
 .stage .body.armsup .core .right-arm {
   -webkit-transform: rotate3d(0, 0, 1, -40deg);
 }
+.stage .body.toes {
+  bottom: 80px;
+}
+.stage .body.toes .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
+}
+.stage .body.toes .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
+}
+.stage .body.toes .showShadow {
+  bottom: -40px;
+  width: 240px;
+  left: calc(50% - 120px);
+}
+.stage .body.jump {
+  bottom: 180px;
+}
+.stage .body.jump .showShadow {
+  bottom: -140px;
+  width: 140px;
+  left: calc(50% - 70px);
+}
 body,
 html {
   height: 100%;
   width: 100%;
   background: #2989d8;
   /* Old browsers */
-
   background: -moz-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* FF3.6+ */
-
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, #2989d8), color-stop(100%, #282f56));
   /* Chrome,Safari4+ */
-
   background: -webkit-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Chrome10+,Safari5.1+ */
-
   background: -o-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Opera 12+ */
-
   background: -ms-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* IE10+ */
-
   background: radial-gradient(ellipse at center, #2989d8 1%, #282f56 100%);
   /* W3C */
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#282f56', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
-
 }
 .stage {
   position: absolute;
@@ -83,7 +97,6 @@ html {
   -webkit-transform: rotate3d(0,0,1,10deg);
   -moz-transform: rotate3d(0,0,1,10deg);
   */
-
 }
 .stage * {
   -webkit-transform-style: preserve-3d;
@@ -93,18 +106,18 @@ html {
 }
 .stage .body {
   position: absolute;
-  bottom: 10%;
+  bottom: 50px;
   left: calc(50% -  150px);
   height: 350px;
   width: 300px;
   z-index: 5;
 }
-.stage .body:after {
+.stage .body .showShadow {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -8px;
+  bottom: -10px;
+  left: calc(50% -  150px);
   height: 10px;
+  width: 300px;
   background: rgba(0, 0, 0, 0.5);
   content: '';
   box-shadow: 0 0 30px #000000;
@@ -120,7 +133,7 @@ html {
 }
 .stage .body .head * {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
 }
 .stage .body .head .neck {
@@ -200,7 +213,7 @@ html {
   background-color: #649b9b;
   box-shadow: none;
   border-radius: 50%;
-  -webkit-animation: talk 0.6666666666666666s alternate ease-in-out infinite;
+  -webkit-animation: talk 0.66666667s alternate ease-in-out infinite;
 }
 .stage .body .core {
   width: 150px;
@@ -217,13 +230,13 @@ html {
   left: 0;
   border-radius: 50% 50% 10% 10%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   z-index: 10;
 }
 .stage .body .core .left-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 200px;
   height: 50px;
@@ -232,7 +245,7 @@ html {
 }
 .stage .body .core .left-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 100px;
   height: 100px;
@@ -243,7 +256,7 @@ html {
 }
 .stage .body .core .right-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 200px;
   height: 50px;
@@ -252,7 +265,7 @@ html {
 }
 .stage .body .core .right-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 100px;
   height: 100px;
@@ -267,7 +280,7 @@ html {
   left: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 150% 50% 35% 5%;
   z-index: 5;
@@ -278,7 +291,7 @@ html {
   right: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 50% 150% 5% 35%;
   z-index: 5;
