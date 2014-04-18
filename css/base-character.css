@@ -1,24 +1,44 @@
 @-webkit-keyframes rotateLeftArmUp {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, -25deg);
-  }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, -40deg);
+    -webkit-transform: rotate3d(0, 0, 1, 40deg);
+    background-color: red;
   }
 }
 @-webkit-keyframes rotateRightArmUp {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, 25deg);
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -40deg);
+    background-color: red;
   }
+}
+@-webkit-keyframes rotateLeftArmDown {
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -40deg);
+    background-color: blue;
+  }
+}
+@-webkit-keyframes rotateRightArmDown {
   to {
     -webkit-transform: rotate3d(0, 0, 1, 40deg);
+    background-color: blue;
   }
 }
 .stage .body.armsup .core .left-arm {
-  -webkit-animation: rotateLeftArmUp 1s alternate ease-in-out infinite;
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
 }
 .stage .body.armsup .core .right-arm {
-  -webkit-animation: rotateRightArmUp 1s alternate ease-in-out infinite;
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
+}
+.stage .body.armsdown .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
+}
+.stage .body.armsdown .core .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
+}
+.stage .body.armsup .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
+}
+.stage .body.armsup .core .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
 }
 body,
 html {
@@ -26,20 +46,28 @@ html {
   width: 100%;
   background: #2989d8;
   /* Old browsers */
+
   background: -moz-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* FF3.6+ */
+
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, #2989d8), color-stop(100%, #282f56));
   /* Chrome,Safari4+ */
+
   background: -webkit-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Chrome10+,Safari5.1+ */
+
   background: -o-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Opera 12+ */
+
   background: -ms-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* IE10+ */
+
   background: radial-gradient(ellipse at center, #2989d8 1%, #282f56 100%);
   /* W3C */
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#282f56', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
+
 }
 .stage {
   position: absolute;
@@ -55,11 +83,13 @@ html {
   -webkit-transform: rotate3d(0,0,1,10deg);
   -moz-transform: rotate3d(0,0,1,10deg);
   */
+
 }
 .stage * {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
+  transition: all 1s;
 }
 .stage .body {
   position: absolute;
@@ -90,7 +120,7 @@ html {
 }
 .stage .body .head * {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
 }
 .stage .body .head .neck {
@@ -170,7 +200,7 @@ html {
   background-color: #649b9b;
   box-shadow: none;
   border-radius: 50%;
-  -webkit-animation: talk 0.66666667s alternate ease-in-out infinite;
+  -webkit-animation: talk 0.6666666666666666s alternate ease-in-out infinite;
 }
 .stage .body .core {
   width: 150px;
@@ -187,13 +217,13 @@ html {
   left: 0;
   border-radius: 50% 50% 10% 10%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   z-index: 10;
 }
 .stage .body .core .left-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 200px;
   height: 50px;
@@ -202,7 +232,7 @@ html {
 }
 .stage .body .core .left-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 100px;
   height: 100px;
@@ -213,7 +243,7 @@ html {
 }
 .stage .body .core .right-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 200px;
   height: 50px;
@@ -222,7 +252,7 @@ html {
 }
 .stage .body .core .right-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 100px;
   height: 100px;
@@ -237,7 +267,7 @@ html {
   left: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 150% 50% 35% 5%;
   z-index: 5;
@@ -248,7 +278,7 @@ html {
   right: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 50% 150% 5% 35%;
   z-index: 5;

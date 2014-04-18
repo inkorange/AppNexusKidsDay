@@ -1,22 +1,42 @@
 @-webkit-keyframes rotateLeftArmUp {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, -25deg);
-  }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, -40deg);
+    -webkit-transform: rotate3d(0, 0, 1, 40deg);
+    background-color: red;
   }
 }
 @-webkit-keyframes rotateRightArmUp {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, 25deg);
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -40deg);
+    background-color: red;
   }
+}
+@-webkit-keyframes rotateLeftArmDown {
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, -40deg);
+    background-color: blue;
+  }
+}
+@-webkit-keyframes rotateRightArmDown {
   to {
     -webkit-transform: rotate3d(0, 0, 1, 40deg);
+    background-color: blue;
   }
 }
 .stage .body.armsup .core .left-arm {
-  -webkit-animation: rotateLeftArmUp 1s alternate ease-in-out infinite;
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
 }
 .stage .body.armsup .core .right-arm {
-  -webkit-animation: rotateRightArmUp 1s alternate ease-in-out infinite;
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
+}
+.stage .body.armsdown .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
+}
+.stage .body.armsdown .core .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
+}
+.stage .body.armsup .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
+}
+.stage .body.armsup .core .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
 }

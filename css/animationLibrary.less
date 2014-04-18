@@ -1,12 +1,21 @@
 
 
 @-webkit-keyframes rotateLeftArmUp {
-	from { -webkit-transform: rotate3d(0,0,1,-25deg); }
-	to { -webkit-transform: rotate3d(0,0,1,-40deg); }
+	//from { -webkit-transform: rotate3d(0,0,1,-25deg); }
+	to { -webkit-transform: rotate3d(0,0,1,40deg); background-color: red; }
 }
 @-webkit-keyframes rotateRightArmUp {
-	from { -webkit-transform: rotate3d(0,0,1,25deg); }
-	to { -webkit-transform: rotate3d(0,0,1,40deg); }
+	//from { -webkit-transform: rotate3d(0,0,1,25deg); }
+	to { -webkit-transform: rotate3d(0,0,1,-40deg);background-color: red;  }
+}
+
+@-webkit-keyframes rotateLeftArmDown {
+	//from { -webkit-transform: rotate3d(0,0,1,-25deg); }
+	to { -webkit-transform: rotate3d(0,0,1,-40deg); background-color: blue;  }
+}
+@-webkit-keyframes rotateRightArmDown {
+	//from { -webkit-transform: rotate3d(0,0,1,25deg); }
+	to { -webkit-transform: rotate3d(0,0,1,40deg); background-color:  blue;  }
 }
 
 
@@ -16,10 +25,30 @@
 		&.armsup {
 			.core {
 				.left-arm {
-					-webkit-animation: rotateLeftArmUp 1s alternate ease-in-out infinite;
+					-webkit-transform: rotate3d(0,0,1,40deg);
 				}
 				.right-arm {
-					-webkit-animation: rotateRightArmUp 1s alternate ease-in-out infinite;
+					-webkit-transform: rotate3d(0,0,1,-40deg);
+				}
+			}
+		}
+		&.armsdown {
+			.core {
+				.left-arm {
+					-webkit-transform: rotate3d(0,0,1,-40deg);
+				}
+				.right-arm {
+					-webkit-transform: rotate3d(0,0,1,40deg);
+				}
+			}
+		}
+		&.armsup {
+			.core {
+				.left-arm {
+					-webkit-transform: rotate3d(0,0,1,40deg);
+				}
+				.right-arm {
+					-webkit-transform: rotate3d(0,0,1,-40deg);
 				}
 			}
 		}
