@@ -1,5 +1,5 @@
 
-
+/*
 @-webkit-keyframes rotateLeftArmUp {
 	//from { -webkit-transform: rotate3d(0,0,1,-25deg); }
 	to { -webkit-transform: rotate3d(0,0,1,40deg); background-color: red; }
@@ -17,18 +17,69 @@
 	//from { -webkit-transform: rotate3d(0,0,1,25deg); }
 	to { -webkit-transform: rotate3d(0,0,1,40deg); background-color:  blue;  }
 }
-
+*/
 
 .stage {
 	.body {
 		// 'armsup' PUT BOTH ARMS UP **************************
-		&.armsup {
+		&.leftarmpoint {
+			.core {
+				-webkit-transform: rotate3d(0,1,0,30deg);
+				.left-arm {
+					-webkit-transform: rotate3d(0,1,0,50deg) translateZ(-10px);
+				}
+				.right-arm {
+					-webkit-transform: translateZ(-20px);
+				}
+
+			}
+		}
+		&.righttarmpoint {
+			.core {
+				-webkit-transform: rotate3d(0,1,0,-30deg);
+				.right-arm {
+					-webkit-transform: rotate3d(0,1,0,-50deg) translateZ(-10px);
+				}
+				.left-arm {
+					-webkit-transform: translateZ(-20px);
+				}
+			}
+		}
+		&.armspoint {
+			.core {
+				.left-arm {
+					-webkit-transform: rotate3d(0,1,0,70deg);
+				}
+				.right-arm {
+					-webkit-transform: rotate3d(0,1,0,-70deg);
+				}
+			}
+		}
+		&.leftarmup {
 			.core {
 				.left-arm {
 					-webkit-transform: rotate3d(0,0,1,40deg);
 				}
+			}
+		}
+		&.rightarmup {
+			.core {
 				.right-arm {
 					-webkit-transform: rotate3d(0,0,1,-40deg);
+				}
+			}
+		}
+		&.leftarmdown {
+			.core {
+				.left-arm {
+					-webkit-transform: rotate3d(0,0,1,-40deg);
+				}
+			}
+		}
+		&.rightarmdown {
+			.core {
+				.right-arm {
+					-webkit-transform: rotate3d(0,0,1,40deg);
 				}
 			}
 		}

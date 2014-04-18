@@ -4,7 +4,7 @@ var robot;
 	robot = function(config) {
 		var _config = {
 			animationRoutine : ['lazy'], // he will just have one lazy move
-			animationLength : 10000, // length of the animation play time
+			animationLength : 6000, // length of the animation play time
 			$robot : null // parent jquery robot object
 		};
 		var _init = function() {
@@ -26,7 +26,7 @@ var robot;
 
 		var _startRobotAnimation = function() {
 			var timer = Math.floor(_config.animationLength / _config.animationRoutine.length);
-			console.log('starting animation: ' + timer);
+			$(".stage div").css('transition','all ' + timer + 'ms');
 			var routine = _config.animationRoutine;
 			for (i = 0; i < routine.length; i++) {
 				(function(thisRoutine, intv) {

@@ -64,7 +64,7 @@ body, html {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
-	transition: all 1s;
+	//transition: all 1s;
   }
   
   .body {
@@ -211,8 +211,9 @@ body, html {
         .shadow();        
         width: @armLength;
         height: @armLength*.25;
-        top: 10%;
-        left: calc(~"50% - "@armLength);
+        top: 20%;
+        left: calc(~"60% - "@armLength);
+
 
         
         &:after {
@@ -231,8 +232,8 @@ body, html {
         .shadow();        
         width: @armLength;
         height: @armLength*.25;
-        top: 10%;
-        right: calc(~"50% - "@armLength);
+        top: 20%;
+        right: calc(~"60% - "@armLength);
 
         &:after {
           position: absolute;
@@ -275,6 +276,25 @@ body, html {
     
   }
 }
+
+.moves {
+	position: fixed;
+	top: 0;
+	left: -40%;
+	width: 40%;
+	bottom: 0;
+	background: rgba(0,0,0,.5);
+	color: white;
+	padding: 20px;
+	z-index: 10000;
+	&.open {
+		left: 0;
+	}
+
+}
+
+
+
 
 @-webkit-keyframes talk {
 	to {
