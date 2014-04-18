@@ -65,3 +65,25 @@
 .stage .body.armsup .core .right-arm {
   -webkit-transform: rotate3d(0, 0, 1, -40deg);
 }
+.stage .body.toes {
+  bottom: 80px;
+}
+.stage .body.toes .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
+}
+.stage .body.toes .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
+}
+.stage .body.toes .showShadow {
+  bottom: -40px;
+  width: 240px;
+  left: calc(50% - 120px);
+}
+.stage .body.jump {
+  bottom: 180px;
+}
+.stage .body.jump .showShadow {
+  bottom: -140px;
+  width: 140px;
+  left: calc(50% - 70px);
+}

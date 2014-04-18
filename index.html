@@ -47,6 +47,7 @@
             </div>
             <div class="left-foot"></div>
             <div class="right-foot"></div>
+	          <div class="showShadow"></div>
           </div>
         </div>
 
@@ -54,8 +55,7 @@
 		<script src="js/robot-pc.js"></script>
 		<script>
 			// this is the collection of classes that will be used to animate.......
-			var animArray = ['armspoint', 'leftarmpoint','leftarmup','armspoint', 'leftarmpoint','leftarmup','armspoint', 'leftarmpoint','leftarmup','rightarmpoint armsdown','armsdown leftarmdown'];
-
+			var animArray = ['toes armspoint', 'toes jump leftarmpoint','leftarmup','armspoint', 'leftarmpoint','leftarmup','jump armspoint', 'leftarmpoint','jump leftarmup','rightarmpoint armsdown','armsdown leftarmdown'];
 			// instantiating your robot and letting it dance
 			var robotEngine = new robot({
 					animationRoutine :  animArray,

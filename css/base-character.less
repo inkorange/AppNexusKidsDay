@@ -70,19 +70,19 @@ body, html {
   .body {
     //border: dashed 1px red;
     position: absolute;
-    bottom: 10%;
+    bottom: 50px;
     left: calc(~"50% - " @robotWidth/2 );
     height: @robotHeight;
     width: @robotWidth;
     z-index: 5;
 
     
-    &:after {
+    .showShadow {
       position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -8px;
+	    bottom: -10px;
+	    left: calc(~"50% - " @robotWidth/2 );
       height: 10px;
+	    width: @robotWidth;
       background: rgba(0,0,0,.5);
       content: '';
       box-shadow: 0 0 30px rgba(0,0,0,1);
@@ -101,6 +101,7 @@ body, html {
       * {
         position: absolute;
         .shadow()
+
       }
       
       .neck {

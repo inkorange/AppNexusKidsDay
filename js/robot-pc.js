@@ -26,7 +26,7 @@ var robot;
 
 		var _startRobotAnimation = function() {
 			var timer = Math.floor(_config.animationLength / _config.animationRoutine.length);
-			$(".stage div").css('transition','all ' + timer + 'ms');
+			$(".stage div").css('transition','all ' + timer + 'ms ease-in-out');
 			var routine = _config.animationRoutine;
 			for (i = 0; i < routine.length; i++) {
 				(function(thisRoutine, intv) {

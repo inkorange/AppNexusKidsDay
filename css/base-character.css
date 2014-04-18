@@ -65,6 +65,28 @@
 .stage .body.armsup .core .right-arm {
   -webkit-transform: rotate3d(0, 0, 1, -40deg);
 }
+.stage .body.toes {
+  bottom: 80px;
+}
+.stage .body.toes .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 40deg);
+}
+.stage .body.toes .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -40deg);
+}
+.stage .body.toes .showShadow {
+  bottom: -40px;
+  width: 240px;
+  left: calc(50% - 120px);
+}
+.stage .body.jump {
+  bottom: 180px;
+}
+.stage .body.jump .showShadow {
+  bottom: -140px;
+  width: 140px;
+  left: calc(50% - 70px);
+}
 body,
 html {
   height: 100%;
@@ -117,18 +139,18 @@ html {
 }
 .stage .body {
   position: absolute;
-  bottom: 10%;
+  bottom: 50px;
   left: calc(50% -  150px);
   height: 350px;
   width: 300px;
   z-index: 5;
 }
-.stage .body:after {
+.stage .body .showShadow {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -8px;
+  bottom: -10px;
+  left: calc(50% -  150px);
   height: 10px;
+  width: 300px;
   background: rgba(0, 0, 0, 0.5);
   content: '';
   box-shadow: 0 0 30px #000000;
