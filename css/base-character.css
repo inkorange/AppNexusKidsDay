@@ -18,14 +18,12 @@
 }
 */
 .stage .body {
-  /* ARM ANIMATIONS */
-
-  /* BODY ANIMATIONS */
-
   /* ****************************************************** */
-
+  /* ARM ANIMATIONS */
+  /* ****************************************************** */
+  /* BODY ANIMATIONS */
+  /* ****************************************************** */
   /* FOOT ANIMATIONS */
-
 }
 .stage .body.leftarmpoint .core {
   -webkit-transform: rotate3d(0, 1, 0, 30deg);
@@ -190,28 +188,20 @@ html {
   width: 100%;
   background: #2989d8;
   /* Old browsers */
-
   background: -moz-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* FF3.6+ */
-
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, #2989d8), color-stop(100%, #282f56));
   /* Chrome,Safari4+ */
-
   background: -webkit-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Chrome10+,Safari5.1+ */
-
   background: -o-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Opera 12+ */
-
   background: -ms-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* IE10+ */
-
   background: radial-gradient(ellipse at center, #2989d8 1%, #282f56 100%);
   /* W3C */
-
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#282f56', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
-
   overflow: hidden;
 }
 h1 {
@@ -235,6 +225,93 @@ h1.fadeIn {
 h1.fadeOut {
   opacity: 0;
 }
+.pickColor {
+  position: absolute;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  border: 3px solid white;
+  box-sizing: border-box;
+  width: 206px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  flex-flow: wrap;
+}
+.pickColor:after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: -20px;
+  left: 80px;
+  background-color: #ffffff;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.pickColor li {
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  box-sizing: border-box;
+  border-right: 3px solid #ffffff;
+  text-align: center;
+  border-radius: 5px;
+}
+.pickColor li:nth-child(4n) {
+  border-right: none;
+}
+.red {
+  background-color: red !important;
+}
+.orange {
+  background-color: orange !important;
+}
+.blue {
+  background-color: blue !important;
+}
+.green {
+  background-color: green !important;
+}
+.triangle {
+  background: #36c !important;
+  background: linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 0 0, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 0 0, linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 7px -15px, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 7px -15px, #3366cc !important;
+  background-size: 15px 30px !important;
+}
+.arrows {
+  background: linear-gradient(45deg, #92baac 45px, transparent 45px) 64px 64px, linear-gradient(45deg, #92baac 45px, transparent 45px, transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px), linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px, #92baac 68px, #92baac 113px, transparent 113px, transparent 158px, #92baac 158px) !important;
+  background-color: #e1ebbd !important;
+  background-size: 128px 128px !important;
+}
+.hearts {
+  background: radial-gradient(circle closest-side at 60% 43%, #bb0033 26%, rgba(187, 0, 51, 0) 27%), radial-gradient(circle closest-side at 40% 43%, #bb0033 26%, rgba(187, 0, 51, 0) 27%), radial-gradient(circle closest-side at 40% 22%, #dd3355 45%, rgba(221, 51, 85, 0) 46%), radial-gradient(circle closest-side at 60% 22%, #dd3355 45%, rgba(221, 51, 85, 0) 46%), radial-gradient(circle closest-side at 50% 35%, #dd3355 30%, rgba(221, 51, 85, 0) 31%), radial-gradient(circle closest-side at 60% 43%, #bb0033 26%, rgba(187, 0, 51, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 43%, #bb0033 26%, rgba(187, 0, 51, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 22%, #dd3355 45%, rgba(221, 51, 85, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 60% 22%, #dd3355 45%, rgba(221, 51, 85, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 50% 35%, #dd3355 30%, rgba(221, 51, 85, 0) 31%) 50px 50px !important;
+  background-color: #b03 !important;
+  background-size: 100px 100px  !important;
+}
+.table {
+  background-color: white !important;
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.5) 50%, transparent 50%), linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 50%) !important;
+  background-size: 50px 50px !important;
+}
+.stripe {
+  background-color: gray !important;
+  background-image: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.5) 50%) !important;
+  background-size: 50px 50px !important;
+}
+.plaid {
+  background-color: #e9d4b9 !important;
+  background-image: repeating-linear-gradient(45deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 120px, rgba(11, 36, 45, 0.5) 120px, rgba(11, 36, 45, 0.5) 140px), repeating-linear-gradient(135deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 140px, rgba(11, 36, 45, 0.5) 140px, rgba(11, 36, 45, 0.5) 160px) !important;
+}
+.grid {
+  background-color: #269 !important;
+  background-image: linear-gradient(#ffffff 2px, transparent 2px), linear-gradient(90deg, #ffffff 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px) !important;
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px !important;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px !important;
+}
 .stage {
   position: absolute;
   top: 0;
@@ -249,7 +326,6 @@ h1.fadeOut {
   -webkit-transform: rotate3d(0,0,1,10deg);
   -moz-transform: rotate3d(0,0,1,10deg);
   */
-
 }
 .stage *,
 .stage *:after,
@@ -290,7 +366,7 @@ h1.fadeOut {
 }
 .stage .body .head * {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
 }
 .stage .body .head .neck {
@@ -388,13 +464,13 @@ h1.fadeOut {
   left: 0;
   border-radius: 50% 50% 10% 10%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   z-index: 10;
 }
 .stage .body .core .left-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 180px;
   height: 45px;
@@ -405,7 +481,7 @@ h1.fadeOut {
 }
 .stage .body .core .left-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 90px;
   height: 90px;
@@ -416,18 +492,16 @@ h1.fadeOut {
 }
 .stage .body .core .right-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 180px;
   height: 45px;
-  top: 10%;
-  right: calc(40% -  180px);
-  -webkit-transform: rotate3d(0, 0, 1, 10deg) translate3d(0, 0, -30px);
-  -webkit-transform-origin: 0% 0%;
+  top: 20%;
+  right: calc(60% -  180px);
 }
 .stage .body .core .right-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 90px;
   height: 90px;
@@ -442,11 +516,10 @@ h1.fadeOut {
   left: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 150% 50% 35% 5%;
   z-index: 5;
-  -webkit-transform-origin: 100% 0;
 }
 .stage .body .right-foot {
   bottom: 0;
@@ -454,52 +527,28 @@ h1.fadeOut {
   right: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 50% 150% 5% 35%;
   z-index: 5;
-  -webkit-transform-origin: 0% 0%;
 }
 .moves {
   position: fixed;
   top: 0;
-  left: calc(-30% - 40px);
-  width: 30%;
+  left: -40%;
+  width: 40%;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 20px;
   z-index: 10000;
-  transition: all .5s;
-}
-.moves section {
-  width: 50%;
-  float: left;
-}
-.moves .handle {
-  position: absolute;
-  top: 20px;
-  right: -30px;
-  background: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  line-height: 30px;
-  height: 30px;
-  width: 30px;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-}
-.moves p {
-  cursor: pointer;
-}
-.moves p:hover {
-  color: #cef1ff;
 }
 .moves.open {
   left: 0;
 }
 @-webkit-keyframes talk {
   to {
-    top: -15px;
+    top: -20px;
   }
 }
 @-webkit-keyframes wink {

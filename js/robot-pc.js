@@ -66,6 +66,47 @@ var robot;
 
 	};
 
+
+	var colorList = ["red", "orange", "green", "blue", "triangle", "arrows", "hearts", "table", "stripe", "plaid", "grid"].sort();
+
+	$("body").on("click", ".pickColor li", function() {
+
+		for (var i=0;i<colorList.length;i++){
+			el.removeClass(colorList[i]);
+		}
+
+		el.addClass($(this).html());
+		$(".pickColor").remove();
+		el = "";
+	});
+
+	var el = "";
+
+	$("body").on("click", ".left-arm, .right-arm, .belly, .left-foot, .right-foot", function() {
+
+		$(".pickColor").remove();
+
+		var $list = $("<ul class='pickColor'></ul>");
+
+		el = $(this);
+
+		for (var i=0;i<colorList.length;i++){
+			var $li = $("<li>"+colorList[i]+"</li>");
+			$li.addClass(colorList[i]);
+			$li.appendTo($list);
+		}
+
+		$list.appendTo("body");
+
+		$list.css(
+			{
+				"top": el.offset().top-$list.height()-20,
+				"left": el.offset().left-27
+			}
+		);
+	});
+
+
 	return robot;
 
 })(jQuery);

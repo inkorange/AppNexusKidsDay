@@ -18,14 +18,12 @@
 }
 */
 .stage .body {
-  /* ARM ANIMATIONS */
-
-  /* BODY ANIMATIONS */
-
   /* ****************************************************** */
-
+  /* ARM ANIMATIONS */
+  /* ****************************************************** */
+  /* BODY ANIMATIONS */
+  /* ****************************************************** */
   /* FOOT ANIMATIONS */
-
 }
 .stage .body.leftarmpoint .core {
   -webkit-transform: rotate3d(0, 1, 0, 30deg);

@@ -68,6 +68,141 @@ h1 {
   background: rgba(100,155,155,1);
 }
 
+.pickColor {
+	position: absolute;
+	z-index: 1000;
+	margin: 0;
+	padding: 0;
+	border: 3px solid white;
+	box-sizing: border-box;
+	width: 206px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	border-radius: 10px;
+	background-color: #ffffff;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	flex-flow: wrap;
+	&:after {
+		content: "";
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		bottom: -20px;
+		left: (200px/2)-(40px/2);
+		background-color: #ffffff;
+		z-index: -1;
+		-webkit-transform: rotate(45deg);
+		box-shadow: 0 0 10px rgba(0,0,0,.5);
+	}
+	li {
+		width: 50px;
+		height: 50px;
+		list-style: none;
+		box-sizing: border-box;
+		border-right: 3px solid #ffffff;
+		text-align: center;
+		border-radius: 5px;
+		&:nth-child(4n) {
+			border-right: none;
+		}
+	}
+}
+
+.red {
+	background-color: red !important;
+}
+
+.orange {
+	background-color: orange !important;
+}
+
+.blue {
+	background-color: blue !important;
+}
+
+.green {
+	background-color: green !important;
+}
+
+.triangle {
+	background: #36c !important;
+	background:
+		linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
+		linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
+		linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
+		linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
+		#36c  !important;
+	background-size: 15px 30px !important;
+}
+
+.arrows {
+	background:
+		linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+		linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+		linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px) !important;
+	background-color:#e1ebbd !important;
+	background-size: 128px 128px !important;
+}
+
+.hearts {
+	background:
+		radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+		radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+		radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+		radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+		radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+
+		radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+		radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+		radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+		radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+		radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px !important;
+	background-color:#b03 !important;
+	background-size:100px 100px  !important;
+}
+
+.table {
+	background-color:white !important;
+	background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
+	linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%) !important;
+	background-size:50px 50px !important;
+}
+
+.stripe {
+	background-color: gray !important;
+	background-image: linear-gradient(transparent 50%, rgba(255,255,255,.5) 50%) !important;
+	background-size: 50px 50px !important;
+}
+
+.plaid {
+	background-color: hsl(34, 53%, 82%)  !important;
+	background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+	hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+	hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+	hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+	hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+	hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px
+	),
+	repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+		hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+		hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+		hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+		hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+		hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px
+	)  !important;
+}
+
+.grid {
+	background-color:#269 !important;
+	background-image: linear-gradient(white 2px, transparent 2px),
+	linear-gradient(90deg, white 2px, transparent 2px),
+	linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px) !important;
+	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px !important;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px !important;
+}
+
 .stage {
   position: absolute;
   top: 0;
@@ -266,11 +401,9 @@ h1 {
         .shadow();        
         width: @armLength;
         height: @armLength*.25;
-        top: 10%;
-        right: calc(~"40% - "@armLength);
-		  -webkit-transform: rotate3d(0,0,1,10deg) translate3d(0, 0, -30px);
-		  //-webkit-animation: rotateRightArm @energy alternate ease-in-out infinite;
-		  -webkit-transform-origin: 0% 0%;
+        top: 20%;
+        right: calc(~"60% - "@armLength);
+
         &:after {
           position: absolute;
           .shadow();        
@@ -293,9 +426,8 @@ h1 {
       .shadow();
       border-radius: 150% 50% 35% 5%;
       z-index: 5;
-		//-webkit-animation: stretch @energy alternate ease-in-out infinite;
-		-webkit-transform-origin: 100% 0;
-	}
+
+    }
     
     .right-foot {
       bottom: 0;
@@ -306,9 +438,8 @@ h1 {
       .shadow();
       border-radius: 50% 150% 5% 35%;
       z-index: 5;
-		//-webkit-animation: stretch @energy alternate ease-in-out infinite;
-		-webkit-transform-origin: 0% 0%;
-	}
+
+    }
     
     
     
@@ -318,39 +449,13 @@ h1 {
 .moves {
 	position: fixed;
 	top: 0;
-	left: calc(~"-30% - 40px");
-	width: 30%;
+	left: -40%;
+	width: 40%;
 	bottom: 0;
 	background: rgba(0,0,0,.5);
 	color: white;
 	padding: 20px;
 	z-index: 10000;
-	transition: all .5s;
-	//overflow: auto;
-	section {
-		width: 50%;
-		float: left;
-	}
-
-	.handle {
-		position: absolute;
-		top: 20px;
-		right: -30px;
-		background: rgba(0,0,0,.5);
-		text-align: center;
-		line-height: 30px;
-		height: 30px;
-		width: 30px;
-		border-radius: 0 5px 5px 0;
-		cursor: pointer;
-	}
-	p {
-		cursor: pointer;
-		&:hover {
-			color: #cef1ff;
-		}
-
-	}
 	&.open {
 		left: 0;
 	}
@@ -362,7 +467,7 @@ h1 {
 
 @-webkit-keyframes talk {
 	to {
-		top: -15px;
+		top: -20px;
 	}
 }
 
