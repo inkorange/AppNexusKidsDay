@@ -102,7 +102,6 @@
 }
 .stage .body.jump {
   bottom: 180px;
-  -webkit-transform: scale3d(0.96, 1.01, 0);
 }
 .stage .body.jump .right-foot {
   -webkit-transform: rotate3d(0, 0, 1, 30deg);
