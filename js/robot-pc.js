@@ -6,7 +6,7 @@ var robot;
 		var _$title = $("h1.title");
 		var _config = {
 			animationRoutine : ['lazy'], // he will just have one lazy move
-			animationLength : 10000, // length of the animation play time
+			animationLength : 15000, // length of the animation play time
 			$robot : null // parent jquery robot object
 		};
 		var _init = function() {

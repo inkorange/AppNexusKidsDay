@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Permanent Marker'), local('PermanentMarker'), url(9vYsg5VgPHKK8SXYbf3sMmVSxyvLCPm9firj_jMeQtQ.woff) format('woff');
+}
 /*
 @-webkit-keyframes rotateLeftArmUp {
 	//from { -webkit-transform: rotate3d(0,0,1,-25deg); }
@@ -36,6 +42,14 @@
 .stage .body.leftarmpoint .core .right-arm {
   -webkit-transform: translateZ(-20px);
 }
+.stage .body.leftarmpoint .right-foot {
+  -webkit-transform: translate3d(-40px, 0, -25px);
+  right: -10%;
+}
+.stage .body.leftarmpoint .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -15deg);
+  left: -10%;
+}
 .stage .body.rightarmpoint .core {
   -webkit-transform: rotate3d(0, 1, 0, -30deg);
 }
@@ -44,6 +58,14 @@
 }
 .stage .body.rightarmpoint .core .left-arm {
   -webkit-transform: translateZ(-20px);
+}
+.stage .body.rightarmpoint .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 15deg);
+  right: -10%;
+}
+.stage .body.rightarmpoint .left-foot {
+  -webkit-transform: translate3d(40px, 0, -25px);
+  left: -10%;
 }
 .stage .body.armspoint .core .left-arm {
   -webkit-transform: rotate3d(0, 1, 0, 70deg);
@@ -78,7 +100,7 @@
   -webkit-transform: rotate3d(0, 0, 1, -40deg);
 }
 .stage .body.toes {
-  -webkit-transform: scale3d(1.01, 1.03, 0);
+  -webkit-transform: scale3d(1.01, 1.03, 1);
   bottom: 130px;
 }
 .stage .body.toes .right-foot {
@@ -89,10 +111,10 @@
   -webkit-transform: rotate3d(0, 0, 1, -25deg);
   left: -10%;
 }
-.stage .body.toes .left-arm {
+.stage .body.toes .core .left-arm {
   -webkit-transform: rotate3d(0, 0, 1, -10deg);
 }
-.stage .body.toes .right-arm {
+.stage .body.toes .core .right-arm {
   -webkit-transform: rotate3d(0, 0, 1, 10deg);
 }
 .stage .body.toes .showShadow {
@@ -111,31 +133,79 @@
   -webkit-transform: rotate3d(0, 0, 1, -30deg);
   left: -10%;
 }
-.stage .body.jump .left-arm {
-  -webkit-transform: rotate3d(0, 0, 1, 10deg);
+.stage .body.jump .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 15deg);
 }
-.stage .body.jump .right-arm {
-  -webkit-transform: rotate3d(0, 0, 1, -10deg);
+.stage .body.jump .core .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -15deg);
 }
 .stage .body.jump .showShadow {
   bottom: -100px;
   width: 140px;
   left: calc(50% - 70px);
 }
-.stage .body.turn {
-  -webkit-transform: rotate3d(0, 1, 0, 80deg);
+.stage .body.turnleft {
+  -webkit-transform: rotate3d(0, 1, 0, 50deg);
 }
-.stage .body.bow .head {
-  -webkit-transform: rotate3d(1, 0, 0, -10deg) translate3d(0, 100px, 0);
+.stage .body.turnleft .head {
+  -webkit-transform: rotate3d(0, 1, 0, -20deg);
 }
-.stage .body.bow .core {
-  -webkit-transform: rotate3d(1, 0, 0, -25deg) translate3d(0, 70px, 0);
+.stage .body.turnleft .showShadow {
+  -webkit-transform: rotate3d(0, 1, 0, -50deg);
+  height: 20px;
 }
-.stage .body.bow .left-arm {
-  -webkit-transform: rotate3d(0, 1, 1, -10deg);
+.stage .body.turnleft .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 20deg) translate3d(0, 0, -2px);
 }
-.stage .body.bow .right-arm {
-  -webkit-transform: rotate3d(0, 1, 1, 10deg);
+.stage .body.turnleft .core .right-arm {
+  -webkit-transform: translate3d(0, 0, -2px);
+}
+.stage .body.turnright {
+  -webkit-transform: rotate3d(0, 1, 0, -50deg);
+}
+.stage .body.turnright .head {
+  -webkit-transform: rotate3d(0, 1, 0, 20deg);
+}
+.stage .body.turnright .showShadow {
+  -webkit-transform: rotate3d(0, 1, 0, 50deg);
+  height: 20px;
+}
+.stage .body.turnright .core .left-arm {
+  -webkit-transform: translate3d(0, 0, -2px);
+}
+.stage .body.turnright .core .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -20deg) translate3d(0, 0, -2px);
+}
+.stage .body.bow {
+  -webkit-transform: rotate3d(1, 0, 0, -30deg) translate3d(0, 33px, 80px);
+}
+.stage .body.bow .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -10deg);
+}
+.stage .body.bow .core .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 10deg);
+}
+.stage .body.pointtosky {
+  -webkit-transform: scale3d(0.98, 1.02, 0) translate3d(0, -50px, 0);
+}
+.stage .body.pointtosky .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 70deg);
+}
+.stage .body.pointtosky .core .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -70deg);
+}
+.stage .body.pointtosky .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  right: -10%;
+}
+.stage .body.pointtosky .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  left: -10%;
+}
+.stage .body.pointtosky .showShadow {
+  -webkit-transform: translate3d(0, 50px, 0);
+  width: 140px;
+  left: calc(50% - 70px);
 }
 .stage .body.rightfootup {
   -webkit-transform: rotate3d(0, 0, 1, -5deg);
@@ -217,16 +287,19 @@ html {
 h1 {
   text-align: center;
   position: absolute;
-  top: -2%;
+  top: -4%;
   left: 0;
   right: 0;
   color: white;
-  text-shadow: 0 5px 1px black;
   opacity: 0;
   -webkit-transform: rotate3d(0, 0, 1, -3deg) scale3d(0, 0, 0);
   transition: all 2s ease-in-out;
-  font-size: 100px;
+  font-size: 150px;
   z-index: 2000;
+  font-family: 'Permanent Marker', 'cursive';
+  background: -webkit-linear-gradient(#ffffff, #7394b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h1.fadeIn {
   opacity: 1;
@@ -353,7 +426,8 @@ h1.fadeOut {
   height: 350px;
   width: 300px;
   z-index: 5;
-  -webkit-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transform: scale3d(1, 1, 1);
 }
 .stage .body .showShadow {
   position: absolute;
@@ -386,6 +460,7 @@ h1.fadeOut {
   bottom: 0;
   left: calc(50% -  17.5px);
   border-radius: 50% 50% 0% 0%;
+  -webkit-transform: translateZ(-10px);
 }
 .stage .body .head .face {
   width: 120px;
@@ -560,7 +635,8 @@ h1.fadeOut {
   transition: all .5s;
 }
 .moves section {
-  width: 50%;
+  width: 48%;
+  margin-right: 1%;
   float: left;
 }
 .moves .handle {
@@ -577,9 +653,11 @@ h1.fadeOut {
 }
 .moves p {
   cursor: pointer;
+  padding: 10px;
 }
 .moves p:hover {
   color: #cef1ff;
+  background: rgba(200, 200, 200, 0.25);
 }
 .moves.open {
   left: 0;

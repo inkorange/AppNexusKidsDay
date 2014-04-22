@@ -9,9 +9,6 @@
         <title>Kids Day Dancing Robot</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/base-character.css">
     </head>
@@ -32,9 +29,11 @@
 			</section>
 			<section>
 				<h3>BODY</h3>
-				<p data-classname="turn" data-remover="true">Turn Around</p>
+				<p data-classname="turnleft">Turn Left</p>
+				<p data-classname="turnright">Turn Right</p>
 				<p data-classname="jump" data-remover="true">Jump</p>
-				<p data-classname="bow">Bow</p>
+				<!-- <p data-classname="bow">Bow</p> -->
+				<p data-classname="pointtosky">Point to the Sky</p>
 			</section>
 			<section>
 				<h3>LEGS</h3>
@@ -79,7 +78,7 @@
 		<script src="js/robot-pc.js"></script>
 		<script>
 			// this is the collection of classes that will be used to animate.......
-			var animArray = ['closeeyes toes', 'closeeyes', 'jump closeeyes', 'closelefteye', 'toes', 'toes jump','leftarmup','jump', 'armspoint rightfootup','leftarmpoint','jump rightarmpoint'];
+			var animArray = ['closeeyes', 'closeeyes toes', 'jump closeeyes', 'rightarmpoint','leftarmpoint','rightarmpoint','leftarmpoint','turnleft rightarmpoint','turnright leftarmpoint','turnleft toes', 'toes', 'toes jump','leftarmup','jump closeeyes', 'closeeyes', 'turnleft toes', 'toes', 'toes jump','leftarmup','jump closeeyes','rightarmpoint','leftarmpoint','jump','armspoint closeeyes','rightarmpoint','leftarmpoint','closeeyes','closelefteye','closelefteye', '', 'jump rightarmup','closeeyes', 'closeeyes toes', 'jump closeeyes', 'rightarmpoint','leftarmpoint','rightarmpoint','leftarmpoint','turnleft rightarmpoint','turnright leftarmpoint','turnleft toes', 'toes', 'toes jump','leftarmup','jump closeeyes', 'closeeyes', 'turnleft toes', 'toes', 'toes jump','leftarmup','jump closeeyes','rightarmpoint','leftarmpoint','jump','armspoint closeeyes','rightarmpoint','leftarmpoint','closeeyes','closelefteye','closelefteye', '', 'jump rightarmup'];
 			// instantiating your robot and letting it dance
 			var robotEngine = new robot({
 					animationRoutine :  animArray,
