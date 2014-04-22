@@ -17,15 +17,39 @@
     </head>
     <body>
         <div class="moves">
-			<h3>ARMS</h3>
-			<p>armsup</p>
-			<p>armsdown</p>
-			<p>leftarmup</p>
-			<p>rightarmup</p>
-			<p>leftarmdown</p>
-			<p>leftarmdown</p>
+			<div class="handle">>></div>
+			<section>
+				<h3>ARMS</h3>
+				<p data-classname="armsup">Both Arms Up</p>
+				<p data-classname="armsdown">Both Arms Down</p>
+				<p data-classname="leftarmup">Left Arm Up</p>
+				<p data-classname="rightarmup">Right Arm Up</p>
+				<p data-classname="leftarmdown">Left Arm Down</p>
+				<p data-classname="rightarmdown">Right Arm Down</p>
+				<p data-classname="leftarmpoint">Left Arm Point</p>
+				<p data-classname="rightarmpoint">Right Arm Point</p>
+				<p data-classname="armspoint">Both Arms Point</p>
+			</section>
+			<section>
+				<h3>BODY</h3>
+				<p data-classname="turn" data-remover="true">Turn Around</p>
+				<p data-classname="jump" data-remover="true">Jump</p>
+				<p data-classname="bow">Bow</p>
+			</section>
+			<section>
+				<h3>LEGS</h3>
+				<p data-classname="toes">Tow Point</p>
+				<p data-classname="rightfootup">Right Foot Up</p>
+				<p data-classname="leftfootup">Left Foot Up</p>
+			</section>
+			<section>
+				<h3>FACE</h3>
+				<p data-classname="closeeyes">Close Both Eyes</p>
+				<p data-classname="closelefteye">Close Left Eye</p>
+				<p data-classname="closerighteye">Close Right Eye</p>
+			</section>
         </div>
-
+		<h1 class="title">Team Name</h1>
         <div class="stage">
           <div class="body">
             <div class="head">
@@ -51,11 +75,11 @@
           </div>
         </div>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/robot-pc.js"></script>
 		<script>
 			// this is the collection of classes that will be used to animate.......
-			var animArray = ['toes armspoint', 'toes jump leftarmpoint','leftarmup','armspoint', 'leftarmpoint','leftarmup','jump armspoint', 'leftarmpoint','jump leftarmup','rightarmpoint armsdown','armsdown leftarmdown'];
+			var animArray = ['closeeyes toes', 'closeeyes', 'jump closeeyes', 'closelefteye', 'toes', 'toes jump','leftarmup','jump', 'armspoint rightfootup','leftarmpoint','jump rightarmpoint'];
 			// instantiating your robot and letting it dance
 			var robotEngine = new robot({
 					animationRoutine :  animArray,

@@ -17,6 +17,16 @@
 	to { -webkit-transform: rotate3d(0,0,1,40deg); background-color:  blue;  }
 }
 */
+.stage .body {
+  /* ARM ANIMATIONS */
+
+  /* BODY ANIMATIONS */
+
+  /* ****************************************************** */
+
+  /* FOOT ANIMATIONS */
+
+}
 .stage .body.leftarmpoint .core {
   -webkit-transform: rotate3d(0, 1, 0, 30deg);
 }
@@ -26,20 +36,22 @@
 .stage .body.leftarmpoint .core .right-arm {
   -webkit-transform: translateZ(-20px);
 }
-.stage .body.righttarmpoint .core {
+.stage .body.rightarmpoint .core {
   -webkit-transform: rotate3d(0, 1, 0, -30deg);
 }
-.stage .body.righttarmpoint .core .right-arm {
+.stage .body.rightarmpoint .core .right-arm {
   -webkit-transform: rotate3d(0, 1, 0, -50deg) translateZ(-10px);
 }
-.stage .body.righttarmpoint .core .left-arm {
+.stage .body.rightarmpoint .core .left-arm {
   -webkit-transform: translateZ(-20px);
 }
 .stage .body.armspoint .core .left-arm {
   -webkit-transform: rotate3d(0, 1, 0, 70deg);
+  left: -100%;
 }
 .stage .body.armspoint .core .right-arm {
   -webkit-transform: rotate3d(0, 1, 0, -70deg);
+  right: -100%;
 }
 .stage .body.leftarmup .core .left-arm {
   -webkit-transform: rotate3d(0, 0, 1, 40deg);
@@ -66,13 +78,22 @@
   -webkit-transform: rotate3d(0, 0, 1, -40deg);
 }
 .stage .body.toes {
-  bottom: 80px;
+  -webkit-transform: scale3d(1.01, 1.03, 0);
+  bottom: 130px;
 }
 .stage .body.toes .right-foot {
-  -webkit-transform: rotate3d(0, 0, 1, 40deg);
+  -webkit-transform: rotate3d(0, 0, 1, 25deg);
+  right: -10%;
 }
 .stage .body.toes .left-foot {
-  -webkit-transform: rotate3d(0, 0, 1, -40deg);
+  -webkit-transform: rotate3d(0, 0, 1, -25deg);
+  left: -10%;
+}
+.stage .body.toes .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -10deg);
+}
+.stage .body.toes .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 10deg);
 }
 .stage .body.toes .showShadow {
   bottom: -40px;
@@ -81,9 +102,86 @@
 }
 .stage .body.jump {
   bottom: 180px;
+  -webkit-transform: scale3d(0.96, 1.01, 0);
+}
+.stage .body.jump .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 30deg);
+  right: -10%;
+}
+.stage .body.jump .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -30deg);
+  left: -10%;
+}
+.stage .body.jump .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 10deg);
+}
+.stage .body.jump .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -10deg);
 }
 .stage .body.jump .showShadow {
-  bottom: -140px;
+  bottom: -100px;
   width: 140px;
   left: calc(50% - 70px);
+}
+.stage .body.turn {
+  -webkit-transform: rotate3d(0, 1, 0, 80deg);
+}
+.stage .body.bow .head {
+  -webkit-transform: rotate3d(1, 0, 0, -10deg) translate3d(0, 100px, 0);
+}
+.stage .body.bow .core {
+  -webkit-transform: rotate3d(1, 0, 0, -25deg) translate3d(0, 70px, 0);
+}
+.stage .body.bow .left-arm {
+  -webkit-transform: rotate3d(0, 1, 1, -10deg);
+}
+.stage .body.bow .right-arm {
+  -webkit-transform: rotate3d(0, 1, 1, 10deg);
+}
+.stage .body.rightfootup {
+  -webkit-transform: rotate3d(0, 0, 1, -5deg);
+}
+.stage .body.rightfootup .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -20deg);
+  right: -10%;
+}
+.stage .body.rightfootup .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 5deg);
+}
+.stage .body.rightfootup .showShadow {
+  -webkit-transform: rotate3d(0, 0, 1, 5deg);
+}
+.stage .body.leftfootup {
+  -webkit-transform: rotate3d(0, 0, 1, 5deg);
+}
+.stage .body.leftfootup .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 20deg);
+  left: -10%;
+}
+.stage .body.leftfootup .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -5deg);
+}
+.stage .body.leftfootup .showShadow {
+  -webkit-transform: rotate3d(0, 0, 1, -5deg);
+}
+.stage .body.closeeyes .head .face .eyes .eye {
+  box-shadow: 0 30px 0 0 #649b9b inset;
+}
+.stage .body.closeeyes .head .face .eyes .eye:before {
+  bottom: 0;
+  height: 15px;
+}
+.stage .body.closelefteye .head .face .eyes .eye:first-of-type {
+  box-shadow: 0 30px 0 0 #649b9b inset;
+}
+.stage .body.closelefteye .head .face .eyes .eye:first-of-type:before {
+  bottom: 0;
+  height: 15px;
+}
+.stage .body.closerighteye .head .face .eyes .eye:last-of-type {
+  box-shadow: 0 30px 0 0 #649b9b inset;
+}
+.stage .body.closerighteye .head .face .eyes .eye:last-of-type:before {
+  bottom: 0;
+  height: 15px;
 }

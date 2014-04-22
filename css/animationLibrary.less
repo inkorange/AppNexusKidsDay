@@ -21,7 +21,9 @@
 
 .stage {
 	.body {
-		// 'armsup' PUT BOTH ARMS UP **************************
+		/* ****************************************************** */
+		/* ARM ANIMATIONS */
+
 		&.leftarmpoint {
 			.core {
 				-webkit-transform: rotate3d(0,1,0,30deg);
@@ -34,7 +36,7 @@
 
 			}
 		}
-		&.righttarmpoint {
+		&.rightarmpoint {
 			.core {
 				-webkit-transform: rotate3d(0,1,0,-30deg);
 				.right-arm {
@@ -49,9 +51,11 @@
 			.core {
 				.left-arm {
 					-webkit-transform: rotate3d(0,1,0,70deg);
+					left: -100%;
 				}
 				.right-arm {
 					-webkit-transform: rotate3d(0,1,0,-70deg);
+					right: -100%;
 				}
 			}
 		}
@@ -103,13 +107,25 @@
 				}
 			}
 		}
+
+		/* ****************************************************** */
+		/* BODY ANIMATIONS */
 		&.toes{
-			bottom: 80px;
+			-webkit-transform: scale3d(1.01,1.03,0);
+			bottom: 130px;
 			.right-foot {
-				-webkit-transform: rotate3d(0,0,1,40deg);
+				-webkit-transform: rotate3d(0,0,1,25deg);
+				right: -10%;
 			}
 			.left-foot {
-				-webkit-transform: rotate3d(0,0,1,-40deg);
+				-webkit-transform: rotate3d(0,0,1,-25deg);
+				left: -10%;
+			}
+			.left-arm {
+				-webkit-transform: rotate3d(0,0,1,-10deg);
+			}
+			.right-arm {
+				-webkit-transform: rotate3d(0,0,1,10deg);
 			}
 			.showShadow {
 				bottom: -40px;
@@ -119,11 +135,113 @@
 		}
 		&.jump{
 			bottom: 180px;
+			-webkit-transform: scale3d(.96,1.01,0);
+			.right-foot {
+				-webkit-transform: rotate3d(0,0,1,30deg);
+				right: -10%;
+			}
+			.left-foot {
+				-webkit-transform: rotate3d(0,0,1,-30deg);
+				left: -10%;
+			}
+			.left-arm {
+				-webkit-transform: rotate3d(0,0,1,10deg);
+			}
+			.right-arm {
+				-webkit-transform: rotate3d(0,0,1,-10deg);
+			}
+
 			.showShadow {
-				bottom: -140px;
+				bottom: -100px;
 				width: 140px;
 				left: calc(~"50% - 70px");
 			}
 		}
+
+		&.turn {
+			-webkit-transform: rotate3d(0,1,0,80deg);
+		}
+		&.bow {
+			.head {
+				-webkit-transform: rotate3d(1,0,0,-10deg) translate3d(0, 100px, 0);
+			}
+			.core {
+				-webkit-transform: rotate3d(1,0,0,-25deg) translate3d(0, 70px, 0);
+			}
+			.left-arm {
+				-webkit-transform: rotate3d(0,1,1,-10deg);
+			}
+			.right-arm {
+				-webkit-transform: rotate3d(0,1,1,10deg);
+			}
+
+		}
+
+		/* ****************************************************** */
+		/* FOOT ANIMATIONS */
+
+		&.rightfootup {
+			-webkit-transform: rotate3d(0,0,1,-5deg);
+			.right-foot {
+				-webkit-transform: rotate3d(0,0,1,-20deg);
+				right: -10%;
+			}
+			.left-foot {
+				-webkit-transform: rotate3d(0,0,1,5deg);
+			}
+			.showShadow {
+				-webkit-transform: rotate3d(0,0,1,5deg);
+			}
+		}
+		&.leftfootup {
+			-webkit-transform: rotate3d(0,0,1,5deg);
+			.left-foot {
+				-webkit-transform: rotate3d(0,0,1,20deg);
+				left: -10%;
+			}
+			.right-foot {
+				-webkit-transform: rotate3d(0,0,1,-5deg);
+			}
+			.showShadow {
+				-webkit-transform: rotate3d(0,0,1,-5deg);
+			}
+
+		}
+
+		&.closeeyes {
+			.head .face .eyes {
+				.eye {
+					box-shadow: 0 30px 0 0 #649b9b inset;
+					&:before {
+						bottom: 0;
+						height: 15px;
+					}
+				}
+			}
+		}
+		&.closelefteye {
+			.head .face .eyes {
+				.eye:first-of-type {
+					box-shadow: 0 30px 0 0 #649b9b inset;
+					&:before {
+						bottom: 0;
+						height: 15px;
+					}
+
+				}
+			}
+		}
+		&.closerighteye {
+			.head .face .eyes {
+				.eye:last-of-type {
+					box-shadow: 0 30px 0 0 #649b9b inset;
+					&:before {
+						bottom: 0;
+						height: 15px;
+					}
+				}
+			}
+		}
+
 	}
 }
