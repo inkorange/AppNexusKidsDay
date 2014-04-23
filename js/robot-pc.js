@@ -76,7 +76,7 @@ var robot;
 	};
 
 
-	var colorList = ["red", "orange", "green", "blue", "triangle", "arrows", "hearts", "table", "stripe", "plaid", "grid"].sort();
+	var colorList = ["red", "orange", "green", "blue", "triangle", "arrows", "hearts", "table", "stripe", "plaid", "grid", "oneDirection", "white", "shoe"].sort();
 
 	$("body").on("click", ".pickColor li", function() {
 

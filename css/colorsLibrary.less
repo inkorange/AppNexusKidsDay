@@ -1,3 +1,7 @@
+.white {
+	background-color: white !important;
+}
+
 .red {
 	background-color: red !important;
 }
@@ -89,4 +93,76 @@
 	linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px) !important;
 	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px !important;
 	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px !important;
+}
+
+.oneDirection {
+	background: url(/images/1d2.jpg) no-repeat center #ffffff !important;
+	background-size: 100% !important;
+}
+
+.shoe {
+	position: relative;
+	width: 100px;
+	height: 50px;
+	background-image: linear-gradient(to top,
+	black 0,
+	black 4%,
+	white 4%,
+	white 14%,
+	red 14%,
+	black 14%,
+	black 17%,
+	transparent 17%,
+	transparent) !important;
+	background-color: orange !important;
+	overflow: hidden;
+	&:before {
+		content: "";
+		width: 19px;
+		height: 30px;
+		background-image: linear-gradient(
+			black 0,
+			black 10%,
+			transparent 10%,
+			transparent 20%,
+			black 20%,
+			black 30%,
+			transparent 30%,
+			transparent 40%,
+			black 40%,
+			black 50%,
+			transparent 50%,
+			transparent 60%,
+			black 60%,
+			black 70%,
+			transparent 70%,
+			transparent 80%);
+		-webkit-transform: rotate(100deg) !important;
+		position: absolute;
+		top: -4px;
+		left: 39%;
+	}
+	&:after {
+		content: "";
+		width: 30px;
+		top: 0;
+		right: 0;
+		bottom: 17%;
+		background-color: white;
+		position: absolute;
+		border-left: 3px solid black;
+	}
+}
+
+.left-foot.shoe {
+	&:before {
+		-webkit-transform: rotate(-100deg) !important;
+	}
+	&:after {
+		left: 0;
+		right: inherit;
+		bottom: 17%;
+		border-left: none;
+		border-right: 3px solid black;
+	}
 }

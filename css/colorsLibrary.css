@@ -1,0 +1,92 @@
+.white {
+  background-color: white !important;
+}
+.red {
+  background-color: red !important;
+}
+.orange {
+  background-color: orange !important;
+}
+.blue {
+  background-color: blue !important;
+}
+.green {
+  background-color: green !important;
+}
+.triangle {
+  background: #36c !important;
+  background: linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 0 0, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 0 0, linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 7px -15px, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 7px -15px, #3366cc !important;
+  background-size: 15px 30px !important;
+}
+.arrows {
+  background: linear-gradient(45deg, #92baac 45px, transparent 45px) 64px 64px, linear-gradient(45deg, #92baac 45px, transparent 45px, transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px), linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px, #92baac 68px, #92baac 113px, transparent 113px, transparent 158px, #92baac 158px) !important;
+  background-color: #e1ebbd !important;
+  background-size: 128px 128px !important;
+}
+.hearts {
+  background: radial-gradient(circle closest-side at 60% 43%, #bb0033 26%, rgba(187, 0, 51, 0) 27%), radial-gradient(circle closest-side at 40% 43%, #bb0033 26%, rgba(187, 0, 51, 0) 27%), radial-gradient(circle closest-side at 40% 22%, #dd3355 45%, rgba(221, 51, 85, 0) 46%), radial-gradient(circle closest-side at 60% 22%, #dd3355 45%, rgba(221, 51, 85, 0) 46%), radial-gradient(circle closest-side at 50% 35%, #dd3355 30%, rgba(221, 51, 85, 0) 31%), radial-gradient(circle closest-side at 60% 43%, #bb0033 26%, rgba(187, 0, 51, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 43%, #bb0033 26%, rgba(187, 0, 51, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 22%, #dd3355 45%, rgba(221, 51, 85, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 60% 22%, #dd3355 45%, rgba(221, 51, 85, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 50% 35%, #dd3355 30%, rgba(221, 51, 85, 0) 31%) 50px 50px !important;
+  background-color: #b03 !important;
+  background-size: 100px 100px  !important;
+}
+.table {
+  background-color: white !important;
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.5) 50%, transparent 50%), linear-gradient(rgba(200, 0, 0, 0.5) 50%, transparent 50%) !important;
+  background-size: 50px 50px !important;
+}
+.stripe {
+  background-color: gray !important;
+  background-image: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.5) 50%) !important;
+  background-size: 50px 50px !important;
+}
+.plaid {
+  background-color: #e9d4b9 !important;
+  background-image: repeating-linear-gradient(45deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 120px, rgba(11, 36, 45, 0.5) 120px, rgba(11, 36, 45, 0.5) 140px), repeating-linear-gradient(135deg, transparent 5px, rgba(11, 36, 45, 0.5) 5px, rgba(11, 36, 45, 0.5) 10px, rgba(211, 119, 111, 0) 10px, rgba(211, 119, 111, 0) 35px, rgba(211, 119, 111, 0.5) 35px, rgba(211, 119, 111, 0.5) 40px, rgba(11, 36, 45, 0.5) 40px, rgba(11, 36, 45, 0.5) 50px, rgba(11, 36, 45, 0) 50px, rgba(11, 36, 45, 0) 60px, rgba(211, 119, 111, 0.5) 60px, rgba(211, 119, 111, 0.5) 70px, rgba(247, 179, 85, 0.5) 70px, rgba(247, 179, 85, 0.5) 80px, rgba(247, 179, 85, 0) 80px, rgba(247, 179, 85, 0) 90px, rgba(211, 119, 111, 0.5) 90px, rgba(211, 119, 111, 0.5) 110px, rgba(211, 119, 111, 0) 110px, rgba(211, 119, 111, 0) 140px, rgba(11, 36, 45, 0.5) 140px, rgba(11, 36, 45, 0.5) 160px) !important;
+}
+.grid {
+  background-color: #269 !important;
+  background-image: linear-gradient(#ffffff 2px, transparent 2px), linear-gradient(90deg, #ffffff 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px) !important;
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px !important;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px !important;
+}
+.oneDirection {
+  background: url(/images/1d2.jpg) no-repeat center #ffffff !important;
+  background-size: 100% !important;
+}
+.shoe {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  background-image: linear-gradient(to top, #000000 0, #000000 4%, #ffffff 4%, #ffffff 14%, #ff0000 14%, #000000 14%, #000000 17%, transparent 17%, transparent) !important;
+  background-color: orange !important;
+  overflow: hidden;
+}
+.shoe:before {
+  content: "";
+  width: 19px;
+  height: 30px;
+  background-image: linear-gradient(#000000 0, #000000 10%, transparent 10%, transparent 20%, #000000 20%, #000000 30%, transparent 30%, transparent 40%, #000000 40%, #000000 50%, transparent 50%, transparent 60%, #000000 60%, #000000 70%, transparent 70%, transparent 80%);
+  -webkit-transform: rotate(100deg) !important;
+  position: absolute;
+  top: -4px;
+  left: 39%;
+}
+.shoe:after {
+  content: "";
+  width: 30px;
+  top: 0;
+  right: 0;
+  bottom: 17%;
+  background-color: white;
+  position: absolute;
+  border-left: 3px solid black;
+}
+.left-foot.shoe:before {
+  -webkit-transform: rotate(-100deg) !important;
+}
+.left-foot.shoe:after {
+  left: 0;
+  right: inherit;
+  bottom: 17%;
+  border-left: none;
+  border-right: 3px solid black;
+}

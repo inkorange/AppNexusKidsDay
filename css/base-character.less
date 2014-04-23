@@ -95,7 +95,7 @@ h1 {
 	align-content: center;
 	border-radius: 10px;
 	background-color: #ffffff;
-	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	-webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
 	flex-flow: wrap;
 	&:after {
 		content: "";
@@ -107,7 +107,7 @@ h1 {
 		background-color: #ffffff;
 		z-index: -1;
 		-webkit-transform: rotate(45deg);
-		box-shadow: 0 0 10px rgba(0,0,0,.5);
+
 	}
 	li {
 		width: 50px;
@@ -413,7 +413,7 @@ h1 {
         height: @armLength*.25;
         top: 10%;
 		  left: calc(~"40% - "@armLength);
-		  -webkit-transform: rotate3d(0,0,1,-10deg) translate3d(0, 0, -30px);
+		  -webkit-transform: rotate3d(0,0,1,-10deg) translate3d(0, 0, 0);
 		  //-webkit-animation: rotateLeftArm @energy alternate ease-in-out infinite;
 		  -webkit-transform-origin: 100% 0%;
 
@@ -436,7 +436,7 @@ h1 {
         height: @armLength*.25;
         top: 10%;
         right: calc(~"40% - "@armLength);
-		  -webkit-transform: rotate3d(0,0,1,10deg) translate3d(0, 0, -30px);
+		  -webkit-transform: rotate3d(0,0,1,10deg) translate3d(0, 0, 0);
 		  //-webkit-animation: rotateRightArm @energy alternate ease-in-out infinite;
 		  -webkit-transform-origin: 0% 0%;
 
