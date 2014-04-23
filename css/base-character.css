@@ -157,12 +157,14 @@
 }
 */
 .stage .body {
-  /* ****************************************************** */
   /* ARM ANIMATIONS */
-  /* ****************************************************** */
+
   /* BODY ANIMATIONS */
+
   /* ****************************************************** */
+
   /* FOOT ANIMATIONS */
+
 }
 .stage .body.leftarmpoint .core {
   -webkit-transform: rotate3d(0, 1, 0, 30deg);
@@ -391,20 +393,28 @@ html {
   width: 100%;
   background: #2989d8;
   /* Old browsers */
+
   background: -moz-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* FF3.6+ */
+
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, #2989d8), color-stop(100%, #282f56));
   /* Chrome,Safari4+ */
+
   background: -webkit-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Chrome10+,Safari5.1+ */
+
   background: -o-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* Opera 12+ */
+
   background: -ms-radial-gradient(center, ellipse cover, #2989d8 1%, #282f56 100%);
   /* IE10+ */
+
   background: radial-gradient(ellipse at center, #2989d8 1%, #282f56 100%);
   /* W3C */
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2989d8', endColorstr='#282f56', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
+
   overflow: hidden;
 }
 h1 {
@@ -483,6 +493,7 @@ h1.fadeOut {
   -webkit-transform: rotate3d(0,0,1,10deg);
   -moz-transform: rotate3d(0,0,1,10deg);
   */
+
 }
 .stage *,
 .stage *:after,
@@ -524,7 +535,7 @@ h1.fadeOut {
 }
 .stage .body .head * {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
 }
 .stage .body .head .neck {
@@ -623,13 +634,13 @@ h1.fadeOut {
   left: 0;
   border-radius: 50% 50% 10% 10%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   z-index: 10;
 }
 .stage .body .core .left-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 180px;
   height: 45px;
@@ -640,7 +651,7 @@ h1.fadeOut {
 }
 .stage .body .core .left-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 90px;
   height: 90px;
@@ -651,7 +662,7 @@ h1.fadeOut {
 }
 .stage .body .core .right-arm {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 180px;
   height: 45px;
@@ -662,7 +673,7 @@ h1.fadeOut {
 }
 .stage .body .core .right-arm:after {
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   width: 90px;
   height: 90px;
@@ -677,7 +688,7 @@ h1.fadeOut {
   left: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 150% 50% 35% 5%;
   z-index: 5;
@@ -689,7 +700,7 @@ h1.fadeOut {
   right: 0;
   height: 20%;
   position: absolute;
-  box-shadow: 3px 3px 1px rgba(255, 255, 255, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 1px rgba(256, 256, 256, 0.25) inset, -5px -15px 5px rgba(0, 0, 0, 0.1) inset, 5px 5px 5px rgba(0, 0, 0, 0.1);
   background: #649b9b;
   border-radius: 50% 150% 5% 35%;
   z-index: 5;
@@ -739,7 +750,8 @@ h1.fadeOut {
   position: absolute;
   right: 20%;
   top: 20px;
-  z-index: 1;
+  z-index: 10000;
+  transition: all .75s;
 }
 .music .track {
   display: inline-block;
@@ -814,6 +826,9 @@ h1.fadeOut {
   top: -30px;
   left: -15px;
   box-shadow: none !important;
+}
+.nowplaying .music {
+  top: -30px;
 }
 @-webkit-keyframes talk {
   to {

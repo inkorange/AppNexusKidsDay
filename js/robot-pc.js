@@ -9,6 +9,7 @@ var robot;
 		var _$oneDirection = _$music.find('#one-direction');
 		var _$lorde = _$music.find('#lorde');
 		var _currentSong = 'lorde';
+		var _timimg;
 
 		var _config = {
 			animationRoutine : ['lazy'], // he will just have one lazy move
@@ -18,8 +19,7 @@ var robot;
 		var _init = function() {
 			console.log("robot's got a heartbeat");
 			$.extend(_config, config);
-			console.log(_config.animationRoutine);
-
+			//console.log(_config.animationRoutine);
 			_bindRobot();
 
 		};
@@ -28,6 +28,9 @@ var robot;
 			$(document).keyup(function(e) {
 				if(e.keyCode == 32) {
 					_startRobotAnimation();
+				}
+				if(e.keyCode == 27) {
+					_stopRobotAnimation();
 				}
 			});
 			_$slideMenu.find(".handle").on('click', function() {
@@ -60,24 +63,38 @@ var robot;
 		};
 
 		var _startRobotAnimation = function() {
+
 			var timer = Math.floor(_config.animationLength / _config.animationRoutine.length);
+
+			$('body').addClass('nowdancing');
+			_config.$robot.removeClass().addClass('body');
 			$(".stage div").css('transition','all ' + timer + 'ms ease-in-out');
 			var routine = _config.animationRoutine;
 
 			_$title.addClass('fadeIn');
 			setTimeout(function() { _$title.addClass('fadeOut'); }, timer*routine.length/2);
+			setTimeout(function() { _$title.removeClass(); }, timer*routine.length);
 			for (i = 0; i < routine.length; i++) {
 				(function(thisRoutine, intv) {
-					setTimeout(function() {
+					_timimg = setTimeout(function() {
 						if(intv > 0) {
 							_config.$robot.removeClass(thisRoutine[intv-1]);
 						}
 						_config.$robot.addClass(thisRoutine[intv]);
+						if (intv == routine.length - 1) {
+							setTimeout(function() {
+								_config.$robot.removeClass().addClass('body');
+								$('body').removeClass('nowdancing');
+							}, 5000);
+						}
 					}, timer * (i));
 				})(routine, i);
 			}
 			_playSong();
 
+		};
+
+		var _stopRobotAnimation = function() {
 		};
 
 		var _playSong = function () {

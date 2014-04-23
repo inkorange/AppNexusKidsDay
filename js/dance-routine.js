@@ -59,7 +59,7 @@
 				var $step = $(
 					'<li class="step step-' + stepId + '">' +
 						'<ul/>' +
-						'<span class="remove">X</span>' +
+						'<span class="remove remove-whole-block">X</span>' +
 					'</li>'
 				).appendTo($list).on('click', '.remove', function () {
 					if ($(this).parent().hasClass('step')) {
