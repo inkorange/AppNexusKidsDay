@@ -19,15 +19,6 @@
 	margin: 10px;
 }
 
-.DanceRoutine .removable {
-	opacity: 1;
-	transition: opacity 0.3s;
-}
-
-.DanceRoutine .removable.removed {
-	opacity: 0;
-}
-
 .DanceRoutine .step {
 	background-color: #fff;
 	border: solid 1px;
@@ -43,8 +34,14 @@
 	border-radius: 5px;
 	display: inline-block;
 	margin: 0 5px 5px 0;
+	opacity: 1;
 	padding: 3px 18px 5px 3px;
 	position: relative;
+	transition: opacity 0.3s;
+}
+
+.DanceRoutine .move.removed {
+	opacity: 0;
 }
 
 .DanceRoutine .remove {

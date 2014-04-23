@@ -57,16 +57,21 @@
 			Object.keys(_mappedSteps).forEach(function (stepId) {
 				var step = _mappedSteps[stepId];
 				var $step = $(
-					'<li class="step step-' + stepId + ' removable">' +
+					'<li class="step step-' + stepId + '">' +
 						'<ul/>' +
 						'<span class="remove">X</span>' +
 					'</li>'
-				).appendTo($list);
+				).appendTo($list).on('click', '.remove', function () {
+					if ($(this).parent().hasClass('step')) {
+						_deleteStep(stepId);
+						_render();
+					}
+				});
 
 				Object.keys(step.moves).forEach(function (moveId) {
 					var move = step.moves[moveId];
 					var $move = $(
-						'<li class="move move-' + moveId + ' removable">' +
+						'<li class="move move-' + moveId + '">' +
 							'<span>' + move.name + '</span>' +
 							'<span class="remove">X</span>' +
 						'</li>'
@@ -74,6 +79,9 @@
 						$move.addClass('removed');
 						window.setTimeout(function () {
 							_deleteMove(stepId, moveId);
+							if (Object.keys(step.moves).length === 0) {
+								_deleteStep(stepId);
+							}
 							_render();
 						}, 300);
 					});
@@ -83,13 +91,19 @@
 				step.$el = $step;
 			});
 			_$root.empty().append($list);
-
-			console.log(_getDanceSteps());
 		}
 
 		function _deleteMove(stepId, moveId) {
 			_mappedSteps[stepId].moves[moveId].$el.remove();
 			delete _mappedSteps[stepId].moves[moveId];
+		}
+
+		function _deleteStep(stepId) {
+			Object.keys(_mappedSteps[stepId].moves).forEach(function (moveId) {
+				_deleteMove(stepId, moveId);
+			});
+			_mappedSteps[stepId].$el.remove();
+			delete _mappedSteps[stepId];
 		}
 
 		this.getDanceSteps = _getDanceSteps;
