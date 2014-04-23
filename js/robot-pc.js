@@ -92,6 +92,10 @@ var robot;
 				})(routine, i);
 			}
 			_playSong();
+			
+			setTimeout(function() {
+				_$music.empty();
+			}, _config.animationLength);
 
 		};
 
