@@ -76,7 +76,13 @@ var robot;
 	};
 
 
-	var colorList = ["red", "orange", "green", "blue", "triangle", "arrows", "hearts", "table", "stripe", "plaid", "grid", "oneDirection", "white", "shoe"].sort();
+	var tshirts = ["oneDirection", "appNexus", "frozen", "olaf", "mickey", "mets", "yankees", "nike"];
+
+	var justPatterns = ["triangle", "arrows", "hearts", "table", "stripe", "plaid", "grid"].sort();
+
+	var justColor = ["white", "purple", "teal", "black", "red", "orange", "blue", "green"].sort();
+
+	var colorList = justPatterns.concat(justColor).sort();
 
 	$("body").on("click", ".pickColor li", function() {
 
@@ -91,14 +97,10 @@ var robot;
 
 	var el = "";
 
-	$("body").on("click", ".left-arm, .right-arm, .belly, .left-foot, .right-foot", function() {
-
+	var pickColor = function(colorList) {
 		$(".pickColor").remove();
 
 		var $list = $("<ul class='pickColor'></ul>");
-
-		el = $(this);
-
 		for (var i=0;i<colorList.length;i++){
 			var $li = $("<li>"+colorList[i]+"</li>");
 			$li.addClass(colorList[i]);
@@ -113,7 +115,33 @@ var robot;
 				"left": el.offset().left-27
 			}
 		);
+	};
+
+
+	$("body").on("click", ".belly", function() {
+		el = $(this);
+		var allOptions = colorList.concat(tshirts).sort();
+		for (var i=0;i<allOptions.length;i++){
+			el.removeClass(allOptions[i]);
+		}
+		pickColor(allOptions);
 	});
+
+	$("body").on("click", ".left-arm, .right-arm", function() {
+		el = $(this);
+		pickColor(colorList);
+	});
+
+	$("body").on("click", ".left-foot, .right-foot", function() {
+		el = $(this);
+		el.addClass("shoe");
+
+		for (var i=0;i<justColor.length;i++){
+			el.removeClass(justColor[i]);
+		}
+
+		pickColor(justColor);
+	})
 
 
 	return robot;

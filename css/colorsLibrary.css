@@ -1,17 +1,26 @@
 .white {
   background-color: white !important;
 }
+.purple {
+  background-color: #8E44AD !important;
+}
+.teal {
+  background-color: #16A085 !important;
+}
+.black {
+  background-color: #2C3E50 !important;
+}
 .red {
-  background-color: red !important;
+  background-color: #C0392B !important;
 }
 .orange {
-  background-color: orange !important;
+  background-color: #F39C12 !important;
 }
 .blue {
-  background-color: blue !important;
+  background-color: #2980B9 !important;
 }
 .green {
-  background-color: green !important;
+  background-color: #2ECC71 !important;
 }
 .triangle {
   background: #36c !important;
@@ -52,12 +61,39 @@
   background: url(/images/1d2.jpg) no-repeat center #ffffff !important;
   background-size: 100% !important;
 }
+.appNexus {
+  background: url(/images/appnexus.png) no-repeat center #ffffff !important;
+  background-size: 75% !important;
+}
+.frozen {
+  background: url(/images/frozen.jpg) no-repeat center #ffffff !important;
+  background-size: 100% !important;
+}
+.olaf {
+  background: url(/images/Frozen-olaf-600x388.jpg) no-repeat center #ffffff !important;
+  background-size: 100% !important;
+}
+.mickey {
+  background: url(/images/Mickey_Mouse.png) no-repeat center #ffffff !important;
+  background-size: 100% !important;
+}
+.mets {
+  background: url(/images/nym-logo.png) no-repeat center #f39c12 !important;
+  background-size: 75% !important;
+}
+.yankees {
+  background: url(/images/Yankees_logo.png) no-repeat center #808080 !important;
+  background-size: 75% !important;
+}
+.nike {
+  background: url(/images/Nike_logo.png) no-repeat center #c0392b !important;
+  background-size: 75% !important;
+}
 .shoe {
   position: relative;
   width: 100px;
   height: 50px;
   background-image: linear-gradient(to top, #000000 0, #000000 4%, #ffffff 4%, #ffffff 14%, #ff0000 14%, #000000 14%, #000000 17%, transparent 17%, transparent) !important;
-  background-color: orange !important;
   overflow: hidden;
 }
 .shoe:before {
