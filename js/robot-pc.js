@@ -5,6 +5,11 @@ var robot;
 		var _$slideMenu = $(".moves");
 		var _$title = $("h1.title");
 		var _$music = $('.music');
+		var _$heyYa = _$music.find('#hey-ya');
+		var _$oneDirection = _$music.find('#one-direction');
+		var _$lorde = _$music.find('#lorde');
+		var _currentSong = 'lorde';
+
 		var _config = {
 			animationRoutine : ['lazy'], // he will just have one lazy move
 			animationLength : 15000, // length of the animation play time
@@ -30,8 +35,14 @@ var robot;
 			});
 			_$slideMenu.find("p").on('click', _applySTaticStyle);
 
-			_$music.find('#hey-ya').on('click', function() {
-				_playSong(1);
+			_$heyYa.on('click', function() {
+				_currentSong = 'outkast';
+			});
+			_$lorde.on('click', function() {
+				_currentSong = 'lorde';
+			});
+			_$oneDirection.on('click', function() {
+				_currentSong = 'one-direction';
 			});
 
 		};
@@ -65,10 +76,13 @@ var robot;
 					}, timer * (i));
 				})(routine, i);
 			}
+			_playSong();
 
 		};
 
-		var _playSong = function (songNumber) {
+		var _playSong = function () {
+			_$music.empty();
+			_$music.append('<audio src="music/'+ _currentSong + '.mp3" autoplay="true" ></audio>');
 		};
 
 		_init();
