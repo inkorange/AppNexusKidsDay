@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+article section.blue-border {
+  border: solid 5px blue;
+  background: white;
+}
+article section.red-border {
+  border: solid 5px red;
+  background: white;
+}
+article section.format-text {
+  text-align: center;
+  font-family: arial;
+  font-size: 36px;
+}
+article.padding-style section {
+  padding: 30px;
+}
+article.side-by-side section {
+  width: 50%;
+  float: left;
+}
+.rotate:hover {
+  cursor: pointer;
+  -webkit-animation: rotate 1s infinite;
+}
+.hover:hover {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  cursor: pointer;
+}
+.smooth {
+  transition: all .75s;
+}
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
