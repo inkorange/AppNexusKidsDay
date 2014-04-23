@@ -90,15 +90,15 @@ var robot;
 	};
 
 
-	var tshirts = ["oneDirection", "appNexus", "frozen", "olaf", "mickey", "mets", "yankees", "nike"];
+	var tshirts = ["oneDirection", "appNexus", "frozen", "olaf", "mickey", "mets", "yankees", "nike"].sort();
 
-	var justPatterns = ["triangle", "arrows", "hearts", "table", "stripe", "plaid", "grid"].sort();
+	var justPatterns = ["triangle", "arrows", "hearts", "table", "stripe", "plaid", "grid", "stars"].sort();
 
 	var justColor = ["white", "purple", "teal", "black", "red", "orange", "blue", "green"].sort();
 
-	var hair = ["hair1", "hair2", "hair3", "hair4"]
+	var hair = ["hair1", "hair2", "hair3", "hair4"];
 
-	var colorList = justPatterns.concat(justColor).sort();
+	var colorList = justPatterns.concat(justColor);
 
 	$("body").on("click", ".pickColor li", function() {
 
@@ -136,7 +136,7 @@ var robot;
 
 	$("body").on("click", ".belly", function() {
 		el = $(this);
-		var allOptions = colorList.concat(tshirts).sort();
+		var allOptions = colorList.concat(tshirts);
 		for (var i=0;i<allOptions.length;i++){
 			el.removeClass(allOptions[i]);
 		}

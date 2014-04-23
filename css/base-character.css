@@ -63,6 +63,11 @@
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px !important;
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px !important;
 }
+.stars {
+  background: linear-gradient(324deg, #232927 4%, transparent 4%) -70px 43px, linear-gradient(36deg, #232927 4%, transparent 4%) 30px 43px, linear-gradient(72deg, #e3d7bf 8.5%, transparent 8.5%) 30px 43px, linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -70px 43px, linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -70px 23px, linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 30px 23px, linear-gradient(324deg, #232927 4%, transparent 4%) -20px 93px, linear-gradient(36deg, #232927 4%, transparent 4%) 80px 93px, linear-gradient(72deg, #e3d7bf 8.5%, transparent 8.5%) 80px 93px, linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -20px 93px, linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -20px 73px, linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 80px 73px !important;
+  background-color: #232927 !important;
+  background-size: 100px 100px !important;
+}
 .oneDirection {
   background: url(/images/1d2.jpg) no-repeat center #ffffff !important;
   background-size: 100% !important;
@@ -433,7 +438,7 @@ h1.fadeOut {
   padding: 0;
   border: 3px solid white;
   box-sizing: border-box;
-  width: 206px;
+  width: 230px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -458,12 +463,11 @@ h1.fadeOut {
   height: 50px;
   list-style: none;
   box-sizing: border-box;
-  border-right: 3px solid #ffffff;
+  border: 1px solid black;
   text-align: center;
   border-radius: 5px;
-}
-.pickColor li:nth-child(4n) {
-  border-right: none;
+  margin: 3px;
+  text-indent: -999em;
 }
 .stage {
   position: absolute;
