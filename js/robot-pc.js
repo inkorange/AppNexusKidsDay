@@ -96,6 +96,8 @@ var robot;
 
 	var justColor = ["white", "purple", "teal", "black", "red", "orange", "blue", "green"].sort();
 
+	var hair = ["hair1", "hair2", "hair3", "hair4"]
+
 	var colorList = justPatterns.concat(justColor).sort();
 
 	$("body").on("click", ".pickColor li", function() {
@@ -156,6 +158,16 @@ var robot;
 
 		pickColor(justColor);
 	})
+
+	$(".head").on("click", ".face", function() {
+		el = $(this);
+
+		for (var i=0;i<hair.length;i++){
+			el.removeClass(hair[i]);
+		}
+
+		pickColor(hair);
+	});
 
 
 	return robot;

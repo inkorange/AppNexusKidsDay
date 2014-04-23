@@ -368,6 +368,8 @@ h1 {
 
     }
     
+    
+    
   }
 }
 
@@ -432,7 +434,79 @@ h1 {
 		}
 	}
 }
+.hair1 {
+	background: url(/images/hair1.png) no-repeat;
+	background-size: 100% 100%;
+}
 
+.hair2 {
+	background: url(/images/hair2.png) no-repeat center;
+	background-size: 100%;
+}
+
+.hair3 {
+	background: url(/images/hair3.png) no-repeat center;
+	background-size: 100%;
+}
+
+.hair4 {
+	background: url(/images/hair4.png) no-repeat center;
+	background-size: 100%;
+}
+
+
+.face {
+	&.hair1 {
+		background: none;
+		.hair {
+			background: url(/images/hair1.png) no-repeat;
+			position: absolute;
+			width: 60px;
+			height: 72px;
+			top: -72px;
+			left: 30px;
+			box-shadow: none !important;
+		}
+	}
+	&.hair2 {
+		background: none;
+		.hair {
+			background: url(/images/hair2.png) no-repeat;
+			position: absolute;
+			width: 90px;
+			height: 30px;
+			top: -30px;
+			left: 15px;
+			box-shadow: none !important;
+		}
+	}
+
+	&.hair3 {
+		background: none;
+		.hair {
+			background: url(/images/hair3.png) no-repeat;
+			position: absolute;
+			width: 190px;
+			height: 173px;
+			top: -36px;
+			left: -35px;
+			box-shadow: none !important;
+		}
+	}
+
+	&.hair4 {
+		background: none;
+		.hair {
+			background: url(/images/hair4.png) no-repeat;
+			position: absolute;
+			width: 150px;
+			height: 190px;
+			top: -30px;
+			left: -15px;
+			box-shadow: none !important;
+		}
+	}
+}
 
 
 @-webkit-keyframes talk {
@@ -474,3 +548,4 @@ h1 {
   from { -webkit-transform: scale3d(1,1.05,1); }
   to { -webkit-transform: scale3d(1,1,1); }
 }
+
