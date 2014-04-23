@@ -67,6 +67,7 @@ var robot;
 			var timer = Math.floor(_config.animationLength / _config.animationRoutine.length);
 
 			$('body').addClass('nowdancing');
+			_$slideMenu.removeClass('open');
 			_config.$robot.removeClass().addClass('body');
 			$(".stage div").css('transition','all ' + timer + 'ms ease-in-out');
 			var routine = _config.animationRoutine;
