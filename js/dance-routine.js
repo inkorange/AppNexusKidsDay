@@ -29,7 +29,7 @@
 			_danceSteps.forEach(function (step) {
 				var stepId = ++uid;
 				var $step = $(
-					'<li class="step step-' + stepId + '">' +
+					'<li class="step step-' + stepId + ' removable">' +
 						'<ul/>' +
 						'<span class="remove">X</span>' +
 					'</li>'
@@ -38,7 +38,7 @@
 				step.split(' ').forEach(function (move) {
 					var moveId = ++uid;
 					$step.find('ul').append(
-						'<li class="move move-' + moveId + '">' +
+						'<li class="move move-' + moveId + ' removable">' +
 							'<span>' + move + '</span>' +
 							'<span class="remove">X</span>' +
 						'</li>'
@@ -49,10 +49,35 @@
 			_$root.append($list);
 		}
 
+		function _getTargetType($el) {
+			if ($el.hasClass('move')) {
+				return 'move';
+			} else if ($el.hasClass('step')) {
+				return 'step';
+			} else {
+				return null;
+			}
+		}
+
 		function _bindEvents() {
 			_$root.on('click', '.remove', function (e) {
-				console.log($(e.target).parent().get(0));
+				var $target = $(e.target).parent().addClass('removed');
+				var type = _getTargetType($target);
+
+				if (type === 'move') {
+					_deleteMove(id);
+				} else if (type === 'step') {
+					_deleteStep(id);
+				}
 			});
+		}
+
+		function _deleteMove(id) {
+			// 
+		}
+
+		function _deleteStep(id) {
+			// 
 		}
 
 		this.getDanceSteps = _getDanceSteps;
