@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/base-character.css">
+        <link rel="stylesheet" href="css/dance-routine.css"/>
     </head>
     <body>
         <div class="moves">
@@ -76,6 +77,7 @@
 
         <script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/robot-pc.js"></script>
+    <script src="js/dance-routine.js"></script>
 		<script>
 			// this is the collection of classes that will be used to animate.......
 			var animArray = ['closeeyes', 'closeeyes toes', 'jump closeeyes', 'rightarmpoint','leftarmpoint','rightarmpoint','leftarmpoint','turnleft rightarmpoint','turnright leftarmpoint','turnleft toes', 'toes', 'toes jump','leftarmup','jump closeeyes', 'closeeyes', 'turnleft toes', 'toes', 'toes jump','leftarmup','jump closeeyes','rightarmpoint','leftarmpoint','jump','armspoint closeeyes','rightarmpoint','leftarmpoint','closeeyes','closelefteye','closelefteye', '', 'jump rightarmup','closeeyes', 'closeeyes toes', 'jump closeeyes', 'rightarmpoint','leftarmpoint','rightarmpoint','leftarmpoint','turnleft rightarmpoint','turnright leftarmpoint','turnleft toes', 'toes', 'toes jump','leftarmup','jump closeeyes', 'closeeyes', 'turnleft toes', 'toes', 'toes jump','leftarmup','jump closeeyes','rightarmpoint','leftarmpoint','jump','armspoint closeeyes','rightarmpoint','leftarmpoint','closeeyes','closelefteye','closelefteye', '', 'jump rightarmup'];
@@ -84,6 +86,18 @@
 					animationRoutine :  animArray,
 					$robot :  $('.body')
 			});
+      var routine;
+
+      // Initialize the dance routine with the default set of steps and add it
+      // to the page.
+      function initRoutine() {
+        routine = new DanceRoutine({
+          danceSteps: animArray
+        });
+        $('body').append(routine.get$Root());
+      }
+
+      initRoutine();
 		</script>
 
 	</body>
