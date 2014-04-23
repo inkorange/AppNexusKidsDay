@@ -4,6 +4,7 @@ var robot;
 	robot = function(config) {
 		var _$slideMenu = $(".moves");
 		var _$title = $("h1.title");
+		var _$music = $('.music');
 		var _config = {
 			animationRoutine : ['lazy'], // he will just have one lazy move
 			animationLength : 15000, // length of the animation play time
@@ -28,6 +29,11 @@ var robot;
 				_$slideMenu.toggleClass("open");
 			});
 			_$slideMenu.find("p").on('click', _applySTaticStyle);
+
+			_$music.find('#hey-ya').on('click', function() {
+				_playSong(1);
+			});
+
 		};
 
 		var _applySTaticStyle = function(e) {
@@ -60,6 +66,9 @@ var robot;
 				})(routine, i);
 			}
 
+		};
+
+		var _playSong = function (songNumber) {
 		};
 
 		_init();
