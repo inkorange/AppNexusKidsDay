@@ -7,10 +7,25 @@
 	top: 0;
 	width: 25%;
 	z-index: 10000;
-	overflow-y:auto;
 	transition: all .75s;
 }
-.nowdancing .DanceRoutine {
+
+.DanceRoutine .routine-handle {
+	position: absolute;
+	top: 20px;
+	left: -30px;
+	background: rgba(0,0,0,.5);
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	width: 30px;
+	border-radius: 5px 0 0 5px;
+	color: white;
+	cursor: pointer;
+}
+
+.nowdancing .DanceRoutine,
+.DanceRoutine.close {
 	right: -25%;
 }
 
@@ -21,7 +36,9 @@
 }
 
 .DanceRoutine > ul {
-	margin: 10px;
+	margin: 10px 0 10px 10px;
+	overflow: auto;
+	height: 100%;
 }
 
 .DanceRoutine .step {

@@ -5,6 +5,7 @@
 		var _mappedSteps;
 		var _selectedStep;
 		var _$root;
+		var _$panelHandle = $('<div class="routine-handle"><<</div>');
 
 		function _init(params) {
 			if (typeof params !== 'object') {
@@ -13,9 +14,15 @@
 			_mappedSteps = _mapSteps(params.danceSteps || []);
 			_selectedStep = null;
 			_$root = $('<div class="DanceRoutine"/>');
+			_bind();
 			_render();
 		}
-
+		function _bind() {
+			_$panelHandle.click(function() {
+				console.log(_$root);
+				_$root.toggleClass('close');
+			});
+		}
 		function _get$Root() {
 			return _$root;
 		}
@@ -113,7 +120,7 @@
 				});
 				step.$el = $step;
 			});
-			_$root.empty().append($list);
+			_$root.empty().append($list).append(_$panelHandle);
 		}
 
 		function _deleteMove(stepId, moveId) {
