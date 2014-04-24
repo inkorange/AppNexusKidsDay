@@ -138,6 +138,43 @@
   width: 140px;
   left: calc(50% - 70px);
 }
+.stage .body.superjump {
+  bottom: 180px;
+}
+.stage .body.superjump .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 10deg);
+  right: -10%;
+}
+.stage .body.superjump .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -30deg);
+  left: -10%;
+}
+.stage .body.superjump .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 30deg);
+}
+.stage .body.superjump .showShadow {
+  bottom: -100px;
+  width: 140px;
+  left: calc(50% - 70px);
+}
+.stage .body.splits {
+  bottom: 100px;
+  -webkit-transform: scale3d(1.05, 0.95, 1);
+}
+.stage .body.splits .right-foot {
+  -webkit-transform: rotate3d(0, 0, 1, -10deg);
+  right: -10%;
+}
+.stage .body.splits .left-foot {
+  -webkit-transform: rotate3d(0, 0, 1, 10deg);
+  left: -10%;
+}
+.stage .body.splits .core .left-arm {
+  -webkit-transform: rotate3d(0, 0, 1, 15deg);
+}
+.stage .body.splits .core .right-arm {
+  -webkit-transform: rotate3d(0, 0, 1, -15deg);
+}
 .stage .body.turnleft {
   -webkit-transform: rotate3d(0, 1, 0, 50deg);
 }
