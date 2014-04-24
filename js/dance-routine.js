@@ -70,13 +70,20 @@
 				).appendTo($list).on('click', function (e) {
 					var $target = $(e.target);
 
-					if ($target.hasClass('remove') && $target.parent().hasClass('step')) {
-						_deleteStep(stepId);
-						_render();
+					if ($target.hasClass('remove')) {
+						if ($target.parent().hasClass('step')) {
+							_deleteStep(stepId);
+							_render();
+						}
 					} else {
-						_selectedStep = stepId;
 						_resetHighlights();
-						$(this).addClass('selected');
+
+						if (stepId === _selectedStep) {
+							_selectedStep = null;
+						} else {
+							_selectedStep = stepId;
+							$(this).addClass('selected');
+						}
 					}
 				});
 
