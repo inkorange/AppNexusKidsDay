@@ -763,6 +763,9 @@ h1.fadeOut {
 .music .track:hover {
   background-color: #FC2F21;
 }
+.nowdancing .music {
+  top: -30px;
+}
 .hair1 {
   background: url(/images/hair1.png) no-repeat;
   background-size: 100% 100%;
@@ -826,9 +829,6 @@ h1.fadeOut {
   top: -30px;
   left: -15px;
   box-shadow: none !important;
-}
-.nowplaying .music {
-  top: -30px;
 }
 @-webkit-keyframes talk {
   to {
