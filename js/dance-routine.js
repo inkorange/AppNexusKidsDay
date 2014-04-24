@@ -19,7 +19,6 @@
 		}
 		function _bind() {
 			_$root.on('click', '.routine-handle', function() {
-				console.log(_$root);
 				_$root.toggleClass('close');
 			});
 		}
@@ -56,7 +55,6 @@
 					};
 				});
 			});
-
 			return map;
 		}
 
@@ -121,6 +119,8 @@
 				step.$el = $step;
 			});
 			_$root.empty().append($list).append(_$panelHandle);
+			//console.log("Setting keys", _getDanceSteps());
+			localStorage.setItem("animArray",_getDanceSteps());
 		}
 
 		function _deleteMove(stepId, moveId) {

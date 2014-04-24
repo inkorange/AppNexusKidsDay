@@ -112,6 +112,10 @@
 			];
 			var robotEngine;
 			var routine;
+			var fromStorageArray = localStorage.getItem("animArray");
+			if(fromStorageArray !== null) {
+				animArray = fromStorageArray.split(',');
+			}
 
 			// Initialize the dance routine with the default set of steps and
 			// add it to the page.
