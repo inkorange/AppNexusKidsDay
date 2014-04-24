@@ -33,6 +33,10 @@
 	position: relative;
 }
 
+.DanceRoutine .step.selected {
+	background-color: red;
+}
+
 .DanceRoutine .move {
 	background-color: #ddd;
 	border: solid 1px #ccc;

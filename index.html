@@ -86,7 +86,7 @@
 		<script src="js/robot-pc.js"></script>
     <script src="js/dance-routine.js"></script>
 		<script>
-			// this is the collection of classes that will be used to animate.......
+			// this is the collection of classes that will be used to animate...
 			var animArray = [
 				'rightfootup leftarmpoint',
 				'lefttfootup rightarmpoint',
@@ -110,23 +110,40 @@
 				'lefttfootup rightarmpoint',
 				'rightfootup leftarmpoint'
 			];
-			// instantiating your robot and letting it dance
-			var robotEngine = new robot({
-					animationRoutine :  animArray,
-					$robot :  $('.body')
+			var robotEngine;
+			var routine;
+
+			// Initialize the dance routine with the default set of steps and
+			// add it to the page.
+			function initRoutine() {
+				routine = new DanceRoutine({
+					danceSteps: animArray
+				});
+				$('body').append(routine.get$Root());
+			}
+
+			function bindEvents() {
+				$(document).keyup(function(e) {
+					if(e.keyCode == 32) {
+						robotEngine.setRoutine(routine.getDanceSteps());
+						robotEngine.start();
+					}
+					if(e.keyCode == 27) {
+						robotEngine.stop();
+					}
+				});
+				$('.moves section p').on('click', function () {
+					routine.addMove($(this).data('classname'));
+				});
+			}
+
+			initRoutine();
+			bindEvents();
+      	
+			robotEngine = new robot({
+				animationRoutine: routine.getDanceSteps(),
+				$robot: $('.body')
 			});
-      var routine;
-
-      // Initialize the dance routine with the default set of steps and add it
-      // to the page.
-      function initRoutine() {
-        routine = new DanceRoutine({
-          danceSteps: animArray
-        });
-        $('body').append(routine.get$Root());
-      }
-
-      initRoutine();
 		</script>
 
 	</body>

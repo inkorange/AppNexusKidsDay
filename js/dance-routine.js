@@ -3,6 +3,7 @@
 
 	function DanceRoutine(params) {
 		var _mappedSteps;
+		var _selectedStep;
 		var _$root;
 
 		function _init(params) {
@@ -10,6 +11,7 @@
 				params = {};
 			}
 			_mappedSteps = _mapSteps(params.danceSteps || []);
+			_selectedStep = null;
 			_$root = $('<div class="DanceRoutine"/>');
 			_render();
 		}
@@ -25,7 +27,7 @@
 				var moves = [];
 
 				Object.keys(_mappedSteps[stepId].moves).forEach(function (moveId) {
-					moves.push(_mappedSteps[stepId].moves[moveId].name);
+					moves.push(_mappedSteps[stepId].moves[moveId].className);
 				});
 				steps.push(moves.join(' '));
 			});
@@ -43,12 +45,16 @@
 					var moveId = ++uid;
 
 					map[stepId].moves[moveId] = {
-						name: move
+						className: move
 					};
 				});
 			});
 
 			return map;
+		}
+
+		function _resetHighlights() {
+			_$root.find('.step').removeClass('selected');
 		}
 
 		function _render() {
@@ -61,18 +67,28 @@
 						'<ul/>' +
 						'<span class="remove remove-whole-block">X</span>' +
 					'</li>'
-				).appendTo($list).on('click', '.remove', function () {
-					if ($(this).parent().hasClass('step')) {
+				).appendTo($list).on('click', function (e) {
+					var $target = $(e.target);
+
+					if ($target.hasClass('remove') && $target.parent().hasClass('step')) {
 						_deleteStep(stepId);
 						_render();
+					} else {
+						_selectedStep = stepId;
+						_resetHighlights();
+						$(this).addClass('selected');
 					}
 				});
+
+				if (stepId === _selectedStep) {
+					$step.addClass('selected');
+				}
 
 				Object.keys(step.moves).forEach(function (moveId) {
 					var move = step.moves[moveId];
 					var $move = $(
 						'<li class="move move-' + moveId + '">' +
-							'<span>' + move.name + '</span>' +
+							'<span>' + move.className + '</span>' +
 							'<span class="remove">X</span>' +
 						'</li>'
 					).appendTo($step).on('click', '.remove', function () {
@@ -104,8 +120,30 @@
 			});
 			_mappedSteps[stepId].$el.remove();
 			delete _mappedSteps[stepId];
+			_selectedStep = null;
 		}
 
+		function _addMove(moveClass) {
+			var stepId;
+			var moveId;
+
+			if (_selectedStep === null) {
+				stepId = ++uid;
+				_mappedSteps[stepId] = {
+					moves: {}
+				};
+			} else {
+				stepId = _selectedStep;
+			}
+
+			moveId = ++uid;
+			_mappedSteps[stepId].moves[moveId] = {
+				className: moveClass
+			};
+			_render();
+		}
+
+		this.addMove = _addMove;
 		this.getDanceSteps = _getDanceSteps;
 		this.get$Root = _get$Root;
 

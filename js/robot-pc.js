@@ -10,6 +10,7 @@ var robot;
 		var _$lorde = _$music.find('#lorde');
 		var _currentSong = 'lorde';
 		var _timimg;
+		var _routine;
 
 		var _config = {
 			animationRoutine : ['lazy'], // he will just have one lazy move
@@ -19,20 +20,12 @@ var robot;
 		var _init = function() {
 			console.log("robot's got a heartbeat");
 			$.extend(_config, config);
-			//console.log(_config.animationRoutine);
+			_routine = _config.animationRoutine;
 			_bindRobot();
 
 		};
 
 		var _bindRobot = function() {
-			$(document).keyup(function(e) {
-				if(e.keyCode == 32) {
-					_startRobotAnimation();
-				}
-				if(e.keyCode == 27) {
-					_stopRobotAnimation();
-				}
-			});
 			_$slideMenu.find(".handle").on('click', function() {
 				_$slideMenu.toggleClass("open");
 			});
@@ -64,13 +57,13 @@ var robot;
 
 		var _startRobotAnimation = function() {
 
-			var timer = Math.floor(_config.animationLength / _config.animationRoutine.length);
+			var timer = Math.floor(_config.animationLength / _routine.length);
 
 			$('body').addClass('nowdancing');
 			_$slideMenu.removeClass('open');
 			_config.$robot.removeClass().addClass('body');
 			$(".stage div").css('transition','all ' + timer + 'ms ease-in-out');
-			var routine = _config.animationRoutine;
+			var routine = _routine;
 
 			_$title.addClass('fadeIn');
 			setTimeout(function() { _$title.addClass('fadeOut'); }, timer*routine.length/2);
@@ -106,6 +99,12 @@ var robot;
 			_$music.empty();
 			_$music.append('<audio src="music/'+ _currentSong + '.mp3" autoplay="true" ></audio>');
 		};
+
+		this.setRoutine = function (routine) {
+			_routine = routine.slice();
+		};
+		this.start = _startRobotAnimation;
+		this.stop = _stopRobotAnimation;
 
 		_init();
 
@@ -195,5 +194,3 @@ var robot;
 	return robot;
 
 })(jQuery);
-
-
