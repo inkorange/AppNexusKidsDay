@@ -18,7 +18,7 @@
 			_render();
 		}
 		function _bind() {
-			_$panelHandle.click(function() {
+			_$root.on('click', '.routine-handle', function() {
 				console.log(_$root);
 				_$root.toggleClass('close');
 			});
